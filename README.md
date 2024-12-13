@@ -1,53 +1,48 @@
-# Sample
+# jpotter.xyz
 
-This is an [Observable Framework](https://observablehq.com/framework) app. To start the local preview server, run:
+This is my personal website built with [Observable Framework](https://observablehq.com/framework). It showcases my work as a data developer and includes interactive weather visualizations.
 
-```
+## Project Overview
+
+The site consists of:
+- Home page with my bio and technical stack
+- Real-time weather dashboard for Black Mountain, NC
+- Gallery of my data projects
+- Visualization journal
+
+## Development
+
+To start the local preview server:
+
+```bash
 npm run dev
 ```
 
-Then visit <http://localhost:3000> to preview your app.
+Then visit http://localhost:3000 to preview the site.
 
-For more, see <https://observablehq.com/framework/getting-started>.
-
-## Project structure
-
-A typical Framework project looks like this:
+## Project Structure
 
 ```ini
 .
 ├─ src
-│  ├─ components
-│  │  └─ timeline.js           # an importable module
 │  ├─ data
-│  │  ├─ launches.csv.js       # a data loader
-│  │  └─ events.json           # a static data file
-│  ├─ example-dashboard.md     # a page
-│  ├─ example-report.md        # another page
-│  └─ index.md                 # the home page
+│  │  ├─ weather.csv          # historical weather data
+│  │  └─ forecast.json        # NWS API weather forecast
+│  ├─ index.md               # home page
+│  ├─ my-weather.md          # weather dashboard
+│  ├─ viz-journal.md         # visualization journal
+│  └─ gallery-of-work.md     # project portfolio
 ├─ .gitignore
-├─ observablehq.config.js      # the app config file
+├─ observablehq.config.js    # site configuration
 ├─ package.json
 └─ README.md
 ```
 
-**`src`** - This is the “source root” — where your source files live. Pages go here. Each page is a Markdown file. Observable Framework uses [file-based routing](https://observablehq.com/framework/routing), which means that the name of the file controls where the page is served. You can create as many pages as you like. Use folders to organize your pages.
+## Deployment
 
-**`src/index.md`** - This is the home page for your app. You can have as many additional pages as you’d like, but you should always have a home page, too.
+The site is automatically deployed via GitHub Actions to Vercel when changes are pushed to the main branch.
 
-**`src/data`** - You can put [data loaders](https://observablehq.com/framework/loaders) or static data files anywhere in your source root, but we recommend putting them here.
+## Links
 
-**`src/components`** - You can put shared [JavaScript modules](https://observablehq.com/framework/javascript/imports) anywhere in your source root, but we recommend putting them here. This helps you pull code out of Markdown files and into JavaScript modules, making it easier to reuse code across pages, write tests and run linters, and even share code with vanilla web applications.
-
-**`observablehq.config.js`** - This is the [app configuration](https://observablehq.com/framework/config) file, such as the pages and sections in the sidebar navigation, and the app’s title.
-
-## Command reference
-
-| Command           | Description                                              |
-| ----------------- | -------------------------------------------------------- |
-| `npm install`            | Install or reinstall dependencies                        |
-| `npm run dev`        | Start local preview server                               |
-| `npm run build`      | Build your static site, generating `./dist`              |
-| `npm run deploy`     | Deploy your app to Observable                            |
-| `npm run clean`      | Clear the local data loader cache                        |
-| `npm run observable` | Run commands like `observable help`                      |
+- Live site: https://jpotter.xyz
+- Source code: https://github.com/jpotter80/jpotter.xyz
