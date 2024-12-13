@@ -12,7 +12,7 @@ The site consists of:
 
 ## Development
 
-To start the local preview server:
+To start the local preview server using preferred text editor:
 
 ```bash
 npm run dev
