@@ -23,7 +23,7 @@ const weather = FileAttachment("/data/weather.csv").csv({typed: true})
 
 ```js
 Plot.plot({
-  title: "Asheville Regional Airport Daily Rain Totals",
+  title: "Asheville Regional Airport Daily Rain Totals (Inches)",
   width,
   caption:
     "This chart illustrates rain totals leading up to and including Hurricane Helene",
