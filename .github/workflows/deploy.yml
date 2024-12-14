@@ -17,6 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          clean: true
       - uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -33,8 +36,9 @@ jobs:
       - name: Build
         run: npm run build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4  # Updated to v4
         with:
+          name: github-pages  # Added artifact name
           path: dist  # Ensure this matches your build output directory
 
   deploy:
@@ -47,5 +51,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+        # Removed the token parameter
