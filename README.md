@@ -12,7 +12,7 @@ The site consists of:
 
 ## Development
 
-To start the local preview server using preferred text editor:
+To start the local preview server:
 
 ```bash
 npm run dev
@@ -40,7 +40,7 @@ Then visit http://localhost:3000 to preview the site.
 
 ## Deployment
 
-The site is automatically deployed via GitHub Actions to Vercel when changes are pushed to the main branch.
+The site is automatically deployed via GitHub Actions to GitHub Pages when changes are pushed to the main branch.
 
 ## Links
 
