@@ -12,14 +12,15 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          clean: true
       
       - uses: actions/setup-node@v3
         with:
@@ -27,24 +28,26 @@ jobs:
           cache: 'npm'
       
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --prefer-offline
       
       - name: Clean data cache only
         run: |
-          rm -rf .observable/cache/data  # Only clear the Observable data cache
-      
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
+          rm -rf .observablehq/cache
+          mkdir -p .observablehq/cache
+          echo "Data cache cleared"
       
       - name: Build
         env:
           NODE_ENV: production
-        run: npm run build
+          BASE_URL: "/jpotter.xyz"
+        run: |
+          npm run build
+          echo "Content of dist directory:"
+          ls -la dist
       
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3  # Changed from v4 to v3
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
           path: dist
 
   deploy:
