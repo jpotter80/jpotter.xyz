@@ -20,26 +20,32 @@ jobs:
         with:
           fetch-depth: 0
           clean: true
+      
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: 'npm'
+      
       - name: Install dependencies
-        run: npm install
-      - name: Clean caches
+        run: npm ci
+      
+      - name: Clean data cache only
         run: |
-          npm cache clean --force
-          rm -rf dist
-          rm -rf .observable
-          rm -rf .cache
+          rm -rf .observable/cache/data  # Only clear the Observable data cache
+      
       - name: Setup Pages
         uses: actions/configure-pages@v3
+      
       - name: Build
+        env:
+          NODE_ENV: production
         run: npm run build
+      
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4  # Updated to v4
+        uses: actions/upload-pages-artifact@v3  # Changed from v4 to v3
         with:
-          name: github-pages  # Added artifact name
-          path: dist  # Ensure this matches your build output directory
+          name: github-pages
+          path: dist
 
   deploy:
     needs: build
@@ -51,4 +57,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        # Removed the token parameter
