@@ -92,7 +92,7 @@ Plot.plot({
     <h3>Tennessee Volunteer Baseball Historical Trajectory<br>2024/12/15</h3>
   </header>
   <p>
-    The Tennessee baseball program has demonstrated remarkable growth over its 116-year history, with an impressive overall record of 2,291 wins, 1,686 losses, and 14 ties, achieving a historical winning percentage of 57.6% across 3,977 total games played.
+    The Tennessee baseball program has demonstrated remarkable growth over its 128-year history, with an impressive overall record of 2,291 wins, 1,686 losses, and 14 ties, achieving a historical winning percentage of 57.6% across 3,977 total games played.
   </p>
   <p>
     Under current head coach Tony Vitello, the program has reached unprecedented heights, posting a 72.5% win rate (295-112) since 2018. This includes three seasons ('20, '22, and '24), with a winning percentage above .800. This performance significantly surpasses the program's historical averages and represents a golden era in Tennessee baseball.
