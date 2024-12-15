@@ -43,7 +43,7 @@ Plot.plot({
 
 <article class="chart-analysis">
   <header>
-    <h3>Hurricane Helene Rainfall Analysis</h3>
+    <h3>Hurricane Helene Rainfall Analysis<br>2024/12/14</h3>
   </header>
   <p>
     This chart clearly indicates the extreme amount of rain received from Helene at Asheville Regional Airport, causing widespread flooding throughout the region.
@@ -62,14 +62,51 @@ Plot.plot({
   </p>
 </article>
 
-<!-- Example of another chart section -->
-<!-- <article class="chart-analysis">
+---
+
+
+```js
+const volBaseballHistory = FileAttachment("/data/vol-baseball-history.csv").csv({typed: true})
+```
+
+```js
+Plot.plot({
+  width,
+  title: "Tennessee Volunteer Baseball",
+  subtitle: "Wins per year",
+  x: { label: "Year", type: "linear" },
+  y: { grid: true },
+  marks: [
+    Plot.dot(volBaseballHistory, {
+      x: "Year",
+      y: "Wins",
+      stroke: "#ff8c38",
+      r: "Wins",
+      tip: true
+    })
+  ]
+})
+```
+<article class="chart-analysis">
   <header>
-    <h3>Next Analysis Title</h3>
+    <h3>Tennessee Volunteer Baseball Historical Trajectory<br>2024/12/15</h3>
   </header>
-  <p>First paragraph of analysis...</p>
-  <p>Supporting details and further analysis...</p>
-</article> -->
+  <p>
+    The Tennessee baseball program has demonstrated remarkable growth over its 116-year history, with an impressive overall record of 2,291 wins, 1,686 losses, and 14 ties, achieving a historical winning percentage of 57.6% across 3,977 total games played.
+  </p>
+  <p>
+    Under current head coach Tony Vitello, the program has reached unprecedented heights, posting a 72.5% win rate (295-112) since 2018. This includes three seasons ('20, '22, and '24), with a winning percentage above .800. This performance significantly surpasses the program's historical averages and represents a golden era in Tennessee baseball.
+  </p>
+  <p>
+    The program's foundation was built by several long-tenured coaches who have left lasting legacies. Bill Wright (19 seasons, 407-309-2) and Rod Delmonico (18 seasons, 699-396) stand out for their longevity and success. Delmonico's 699 wins remain the most in program history, while Wright's nearly two decades of leadership provided crucial stability during the program's development.
+  </p>
+  <p>
+    Recent performance metrics highlight the program's upward trajectory. In the past 21 seasons (2004-2024), Tennessee has maintained a 59.5% winning percentage, demonstrating consistent improvement above the program's historical average. This period has seen significant investments in facilities, coaching, and player development, resulting in enhanced competitive success.
+  </p>
+  <p>
+    Looking at the program's evolution, there's a clear pattern of increasing success and stability. From the challenging early years, including the program's lowest point in 1958 (2-13-1 under George Cafego), to the modern era's sustained excellence, Tennessee baseball has transformed into one of the nation's premier programs. This growth reflects not just athletic achievement, but the development of a comprehensive program that consistently competes at the highest level of collegiate baseball. And in 2025, Tennessee Baseball will take the diamond as the reigning National Champions.
+  </p>
+</article>
 
 ---
 
