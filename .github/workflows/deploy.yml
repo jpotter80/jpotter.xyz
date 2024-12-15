@@ -32,18 +32,18 @@ jobs:
       
       - name: Clean data caches
         run: |
-          rm -rf dist/_file/data
-          rm -rf src/.observablehq/cache/data
-          echo "Source cache and built data files cleared"
+          mkdir -p dist/_file/data  # Ensure directory exists before cleaning
+          mkdir -p src/.observablehq/cache/data
+          rm -rf dist/_file/data/*
+          rm -rf src/.observablehq/cache/data/*
+          echo "Data caches cleared"
       
       - name: Build
         env:
           NODE_ENV: production
-          BASE_URL: "/jpotter.xyz"
         run: |
           npm run build
-          echo "Content of dist/_file/data directory:"
-          ls -la dist/_file/data || echo "No data files yet"
+          echo "Build complete"
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
