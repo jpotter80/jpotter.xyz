@@ -30,10 +30,11 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline
       
-      - name: Clean data files
+      - name: Clean data caches
         run: |
           rm -rf dist/_file/data
-          echo "Data files cleared"
+          rm -rf src/.observablehq/cache/data
+          echo "Source cache and built data files cleared"
       
       - name: Build
         env:
@@ -42,7 +43,7 @@ jobs:
         run: |
           npm run build
           echo "Content of dist/_file/data directory:"
-          ls -la dist/_file/data
+          ls -la dist/_file/data || echo "No data files yet"
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
