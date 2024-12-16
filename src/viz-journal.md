@@ -171,6 +171,14 @@ a[href] {
   color: #7fc8b6;
 }
 
+.chart-analysis h4 {
+  text-align: left;
+  display: block;
+  margin: 0;
+  font-size: 22px;
+  color: #7fc8b6;
+}
+
 .chart-analysis p {
   text-align: justify;
   margin: 1.5rem 0;
