@@ -1,6 +1,5 @@
 ---
 theme: [deep-space, wide]
-toc: true
 title: Viz Journal
 ---
 <head>
