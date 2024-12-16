@@ -1,5 +1,6 @@
 ---
 theme: [deep-space, wide]
+toc: true
 title: Viz Journal
 ---
 <head>
@@ -43,7 +44,8 @@ Plot.plot({
 
 <article class="chart-analysis">
   <header>
-    <h3>Hurricane Helene Rainfall Analysis<br>2024/12/14</h3>
+    <h3>Hurricane Helene Rainfall Analysis</h3>
+    <h4>2024/12/14</h4>
   </header>
   <p>
     This chart clearly indicates the extreme amount of rain received from Helene at Asheville Regional Airport, causing widespread flooding throughout the region.
@@ -89,7 +91,9 @@ Plot.plot({
 ```
 <article class="chart-analysis">
   <header>
-    <h3>Tennessee Volunteer Baseball Historical Trajectory<br>2024/12/15</h3>
+  <div>
+    <h3>Tennessee Volunteer Baseball Historical Trajectory</h3>
+    <h4>2024/12/15</h4>
   </header>
   <p>
     The Tennessee baseball program has demonstrated remarkable growth over its 128-year history, with an impressive overall record of 2,291 wins, 1,686 losses, and 14 ties, achieving a historical winning percentage of 57.6% across 3,977 total games played.
