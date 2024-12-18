@@ -56,7 +56,7 @@ Plot.plot({
     As of December 11, 2024, the State of North Carolina has verified 103 storm-related fatalities; 43 coming from Buncombe County alone. <a href="https://www.ncdhhs.gov/assistance/hurricane-helene-recovery-resources/hurricane-helene-storm-related-fatalities">(ncdhhs.gov)</a> This county includes the popular tourist destination of Asheville, as well as our own vibrant Town of Black Mountain. 
   </p>
   <p>
-    In Black Mountain, we were without water and power for more than three weeks. While the region's infrastructure was decimated, including more than 7,200 incidents of road and bridge damage.
+    In Black Mountain, we were without water and power for more than three weeks, while the region's infrastructure was decimated, including more than 7,200 incidents of road and bridge damage.
   </p>
   <p>    
     The lasting effects of this storm will be felt for generations, with some hollows and small towns completely washed away. Though the several-billion dollars needed for rebuilding the region is an enormous figure, the cultural significance of what was lost is priceless.
