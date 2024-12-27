@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <!-- Black background -->
+    <rect width="32" height="32" fill="black"/>
+
     <!-- Border circle -->
     <circle cx="16" cy="16" r="15" fill="none" stroke="#7fc8b6" stroke-width="2"/>
 
