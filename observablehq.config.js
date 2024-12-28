@@ -25,8 +25,16 @@ export default {
       open: true,
       pages: [
         {
+          name: "Bash",
+          path: "/quick-reference/bash",
+        },
+        {
           name: "Duckdb",
           path: "/quick-reference/duckdb",
+        },
+        {
+          name: "GNU Coreutils",
+          path: "/quick-reference/gnu-coreutils",  
         },
         {
           name: "Kubuntu Keyboard Shortcuts",
@@ -43,6 +51,10 @@ export default {
         {
           name: "Powershell",
           path: "/quick-reference/powershell",
+        },
+        {
+          name: "Python Algorithms",
+          path: "/quick-reference/python-algorithms",
         },
       ],
     },
