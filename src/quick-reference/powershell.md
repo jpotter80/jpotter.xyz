@@ -1,4 +1,14 @@
-# Comprehensive Guide to PowerShell
+---
+theme: [deep-space, wide]
+title: Gallery of Work
+toc: true,
+---
+
+<body>
+
+# Practical Guide to PowerShell
+
+---
 
 ## Introduction
 
@@ -10,6 +20,10 @@ PowerShell is a task automation framework and command-line shell from Microsoft.
 - Command-line shell
 - Automation platform
 - Configuration management framework
+
+<a href="https://learn.microsoft.com/en-us/powershell/">Visit the PowerShell Docs</a>
+
+---
 
 ## Basic Concepts
 
@@ -38,6 +52,8 @@ cd  -> Set-Location
 dir -> Get-ChildItem
 cls -> Clear-Host
 ```
+
+---
 
 ## PowerShell Commands (Cmdlets)
 
@@ -82,6 +98,8 @@ Set-Content -Path "file.txt" -Value "Hello, World!"
 Add-Content -Path "file.txt" -Value "Additional line"
 ```
 
+---
+
 ## Variables and Data Types
 
 ### Variable Declaration and Assignment
@@ -122,6 +140,8 @@ $local:localVar = "Local scope"
 $env:PATH
 $env:USERPROFILE
 ```
+
+---
 
 ## Flow Control
 
@@ -166,6 +186,8 @@ do {
     $counter++
 } while ($counter -lt 5)
 ```
+
+---
 
 ## Functions and Scripts
 
@@ -223,6 +245,8 @@ function Get-SystemInfo {
 }
 ```
 
+---
+
 ## Working with Files and Folders
 
 ### File System Navigation
@@ -253,6 +277,8 @@ Get-Content -Path "file.txt" | Select-String -Pattern "search term"
 # Compare files
 Compare-Object -ReferenceObject (Get-Content "file1.txt") -DifferenceObject (Get-Content "file2.txt")
 ```
+
+---
 
 ## System Administration Tasks
 
@@ -299,6 +325,8 @@ Install-WindowsUpdate
 Get-WUHistory
 ```
 
+---
+
 ## Error Handling
 
 ### Try-Catch Blocks
@@ -326,6 +354,8 @@ $ErrorActionPreference = "SilentlyContinue"  # Suppress error messages
 Get-Process -Name "NonExistentProcess" -ErrorAction SilentlyContinue
 ```
 
+---
+
 ## PowerShell Profiles
 
 ### Profile Locations
@@ -352,6 +382,8 @@ Set-Alias -Name np -Value notepad.exe
 # Set default location
 Set-Location C:\Users\Username\Documents
 ```
+
+---
 
 ## Best Practices
 
@@ -401,6 +433,8 @@ $processes | ForEach-Object { $_.Name }
 # Bad
 Get-Process | ForEach-Object { $_.Name }
 ```
+
+---
 
 ## Advanced Topics
 
@@ -455,3 +489,15 @@ class Person {
 $person = [Person]::new("John", 30)
 $person.ToString()
 ```
+
+---
+
+</body>
+
+<style>
+
+a[href] {
+  color: #7fc8b6;
+}
+
+</style>

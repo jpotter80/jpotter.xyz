@@ -6,48 +6,47 @@ export default {
   // The pages and sections in the sidebar. If you don’t specify this option,
   // all pages will be listed in alphabetical order. Listing pages explicitly
   // lets you organize them into sections and have unlisted pages.
-   pages: [
-     {
-       name: "Gallery of Work", 
-       path: "/gallery-of-work"
-     },
-     {
-       name: "My Weather", 
-       path: "/my-weather"
-     },
-     {
-       name: "Viz Journal", 
-       path: "/viz-journal"
-     },
-     {
-       name: "Quick Reference",
-       collapsible: true,
-       open: true,
-       pages: [
-         {
-           name: "Neovim",
-           path: "/quick-reference/neovim"
-         },
-         {
-           name: "Kubuntu Keyboard Shortcuts",
-           path: "/quick-reference/kubuntu-keyboard-shortcuts"
-         },
-         {
-           name: "Linux System Administration",
-           path: "/quick-reference/linux-sysadmin"
-         },
-         {
-           name: "Powershell",
-           path: "/quick-reference/powershell"
-         },
-         {
-           name: "Duckdb",
-           path: "/quick-reference/duckdb"
-
-         }
-       ]
-     }
-   ],
+  pages: [
+    {
+      name: "Gallery of Work",
+      path: "/gallery-of-work",
+    },
+    {
+      name: "My Weather",
+      path: "/my-weather",
+    },
+    {
+      name: "Viz Journal",
+      path: "/viz-journal",
+    },
+    {
+      name: "Quick Reference",
+      collapsible: true,
+      open: true,
+      pages: [
+        {
+          name: "Duckdb",
+          path: "/quick-reference/duckdb",
+        },
+        {
+          name: "Kubuntu Keyboard Shortcuts",
+          path: "/quick-reference/kubuntu-keyboard-shortcuts",
+        },
+        {
+          name: "Linux System Administration",
+          path: "/quick-reference/linux-sysadmin",
+        },
+        {
+          name: "Neovim",
+          path: "/quick-reference/neovim",
+        },
+        {
+          name: "Powershell",
+          path: "/quick-reference/powershell",
+        },
+      ],
+    },
+  ],
 
   // Content to add to the head of the page, e.g. for a favicon:
   head: '<link rel="icon" href="/data/logo.svg" type="image/svg" sizes="32x32">',

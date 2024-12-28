@@ -1,4 +1,16 @@
-# Kubuntu 24.04 Keyboard Shortcuts Guide
+---
+theme: [deep-space, wide]
+title: Gallery of Work
+toc: true,
+---
+
+<body>
+
+# Kubuntu 24.04 Keyboard Shortcuts
+
+<a href="https://kubuntu.org/">Visit kubuntu.org</a>
+
+---
 
 ## System Controls
 
@@ -19,6 +31,8 @@
 ### KRunner (Application Launcher)
 - `Alt + Space` or `Alt + F2` - Launch KRunner
 - `Alt + F1` - Open application launcher menu
+
+---
 
 ## Window Management
 
@@ -46,6 +60,8 @@
 - `Meta + Shift + Left/Right` - Move window to previous/next screen
 - `Meta + P` - Display configuration
 - `Meta + Shift + P` - Switch between output configurations
+
+---
 
 ## Application Shortcuts
 
@@ -81,6 +97,8 @@
 - `Ctrl + W` - Close tab
 - `Ctrl + L` - Focus location bar
 
+---
+
 ## Workspace Features
 
 ### Plasma Desktop
@@ -105,6 +123,8 @@
 - `Meta + -` - Zoom out
 - `Meta + 0` - Reset zoom
 
+---
+
 ## Media Controls
 
 ### Audio
@@ -119,6 +139,8 @@
 - `Meta + Alt + B` - Previous track
 - `Meta + Alt + S` - Stop playback
 
+---
+
 ## Accessibility
 
 ### Screen Reader
@@ -131,6 +153,8 @@
 - `Meta + Shift + Mouse Wheel` - Change opacity of active window
 - `Meta + Ctrl + M` - Toggle magnifier
 - `Meta + Ctrl + H` - Toggle high contrast
+
+---
 
 ## Custom Shortcuts
 Note: These can be configured in System Settings > Shortcuts
@@ -153,6 +177,8 @@ Note: These can be configured in System Settings > Shortcuts
 6. Press desired key combination
 7. Click "Apply"
 
+---
+
 ## Tips
 - Most shortcuts can be customized in System Settings > Shortcuts
 - Global shortcuts work across all applications
@@ -160,3 +186,15 @@ Note: These can be configured in System Settings > Shortcuts
 - Conflicting shortcuts will prioritize application-specific over global
 - The Meta key is usually the Windows key or Command key
 - Some shortcuts might vary depending on your specific Kubuntu configuration
+
+---
+
+</body>
+
+<style>
+
+a[href] {
+  color: #7fc8b6;
+}
+
+</style>

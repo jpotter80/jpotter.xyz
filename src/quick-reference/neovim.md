@@ -1,4 +1,16 @@
-# Neovim Linux Cheatsheet
+---
+theme: [deep-space, wide]
+title: Gallery of Work
+toc: true,
+---
+
+<body>
+
+# Neovim Text Editor Cheatsheet
+
+<a href="https://neovim.io/">Visit neovim.io</a> or the repo at <a href="https://github.com/neovim/neovim">GitHub</a>
+
+---
 
 ## Essential Commands (Most Frequently Used)
 
@@ -33,6 +45,8 @@
 - `:q!` - Force quit (discards changes)
 - `:wq` or `ZZ` - Save and quit
 - `:wa` - Save all buffers
+
+---
 
 ## Intermediate Commands
 
@@ -71,6 +85,8 @@
 - `N` - Repeat search in opposite direction
 - `:%s/old/new/g` - Replace all occurrences in file
 - `:%s/old/new/gc` - Replace all occurrences with confirmation
+
+---
 
 ## Advanced Features
 
@@ -139,3 +155,15 @@
 - `:set expandtab` - Use spaces instead of tabs
 - `:set tabstop=4` - Set tab width
 - `:help {topic}` - Get help on topic
+
+---
+
+</body>
+
+<style>
+
+a[href] {
+  color: #7fc8b6;
+}
+
+</style>

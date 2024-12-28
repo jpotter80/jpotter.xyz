@@ -1,4 +1,58 @@
-# Linux System Administration Command Guide
+---
+theme: [deep-space, wide]
+title: Gallery of Work
+toc: true,
+---
+
+<body>
+
+# Linux System Administration Command Line Guide
+
+<a href="https://ubuntu.com/tutorials/command-line-for-beginners#1">Visit ubuntu.com</a> for a beginner's tutorial of the command line.
+
+
+
+---
+
+
+## File System Management
+
+### File Operations
+```bash
+# File Management
+ls -la                  # List files with details
+cp [options] src dest   # Copy files
+mv src dest            # Move/rename files
+rm [options] file      # Remove files
+chmod [permissions] file # Change permissions
+chown user:group file  # Change ownership
+chattr [+-=] file      # Change file attributes
+lsattr file            # List file attributes
+
+# File Search
+find / -name filename  # Find files
+locate filename        # Quick file search
+which command          # Show command location
+whereis command        # Show binary/manual locations
+```
+
+### File System Operations
+```bash
+# File System Management
+mount device mountpoint # Mount file system
+umount device          # Unmount file system
+fsck device            # Check file system
+mkfs.type device       # Create file system
+tune2fs [options] device # Adjust file system parameters
+
+# Disk Operations
+parted                 # Partition editor
+gdisk                  # GPT partition table manipulator
+fdisk                  # MBR partition editor
+resize2fs device       # Resize file system
+```
+
+---
 
 ## System Information and Monitoring
 
@@ -67,13 +121,15 @@ last                   # Login history
 who                    # Current logins
 ```
 
+---
+
 ## User and Group Management
 
 ### User Management
 ```bash
 # User Operations
 useradd [username]      # Create user
-usermod [options] [user]# Modify user
+usermod [options] [user] # Modify user
 userdel [username]      # Delete user
 passwd [username]       # Set password
 chage [options] [user]  # Change user password expiry
@@ -100,42 +156,7 @@ groups [user]           # List user groups
 getent group           # List all groups
 ```
 
-## File System Management
-
-### File Operations
-```bash
-# File Management
-ls -la                  # List files with details
-cp [options] src dest   # Copy files
-mv src dest            # Move/rename files
-rm [options] file      # Remove files
-chmod [permissions] file # Change permissions
-chown user:group file  # Change ownership
-chattr [+-=] file      # Change file attributes
-lsattr file            # List file attributes
-
-# File Search
-find / -name filename  # Find files
-locate filename        # Quick file search
-which command          # Show command location
-whereis command        # Show binary/manual locations
-```
-
-### File System Operations
-```bash
-# File System Management
-mount device mountpoint # Mount file system
-umount device          # Unmount file system
-fsck device            # Check file system
-mkfs.type device       # Create file system
-tune2fs [options] device # Adjust file system parameters
-
-# Disk Operations
-parted                 # Partition editor
-gdisk                  # GPT partition table manipulator
-fdisk                  # MBR partition editor
-resize2fs device       # Resize file system
-```
+---
 
 ## Network Administration
 
@@ -169,6 +190,8 @@ nmap [options] target # Network scanner
 tcpdump               # Packet analyzer
 ```
 
+---
+
 ## Package Management
 
 ### APT (Debian/Ubuntu)
@@ -196,6 +219,8 @@ dnf update            # Update packages (newer)
 dnf install package   # Install package (newer)
 ```
 
+---
+
 ## Service Management
 
 ### Systemd
@@ -215,6 +240,8 @@ systemctl daemon-reload   # Reload systemd
 journalctl -u service    # View service logs
 ```
 
+---
+
 ## Backup and Recovery
 
 ### Backup Commands
@@ -227,6 +254,8 @@ dd if=/dev/sda of=disk.img  # Disk imaging
 dump -0uf /backup /dev/sda1 # Filesystem backup
 restore -rf /backup         # Restore from backup
 ```
+
+---
 
 ## Security and Access Control
 
@@ -245,6 +274,8 @@ ausearch -k keyword      # Search audit logs
 last                     # Show login history
 lastb                    # Show bad login attempts
 ```
+
+---
 
 ## Performance Tuning
 
@@ -270,6 +301,8 @@ perf record command     # Record performance data
 perf report            # Report performance data
 ```
 
+---
+
 ## Best Practices
 1. Always make backups before major system changes
 2. Use sudo instead of root login when possible
@@ -281,3 +314,15 @@ perf report            # Report performance data
 8. Maintain current system documentation
 9. Set up automated monitoring and alerting
 10. Regularly review system performance and security
+
+---
+
+</body>
+
+<style>
+
+a[href] {
+  color: #7fc8b6;
+}
+
+</style>

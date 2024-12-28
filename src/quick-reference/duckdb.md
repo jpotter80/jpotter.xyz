@@ -1,9 +1,22 @@
-# Comprehensive Guide to Using DuckDB Locally
+---
+theme: [deep-space, wide]
+title: Gallery of Work
+toc: true,
+---
 
+<body>
+
+# Practical Guide to Using DuckDB Locally
+
+---
 
 ## Introduction
 
-DuckDB is an embedded analytical database system that provides fast and efficient data processing capabilities. It's designed to handle both small and large datasets with excellent performance, particularly for analytical queries. This guide will walk you through everything you need to know to use DuckDB effectively in your local environment.
+DuckDB is an embedded analytical database system that provides fast and efficient data processing capabilities. It's designed to handle both small and large datasets with excellent performance, particularly for analytical queries.
+
+<a href="https://duckdb.org/">Visit duckdb.org</a>
+
+---
 
 ## Installation
 
@@ -19,6 +32,8 @@ install.packages("duckdb")
 
 ### CLI
 Download the appropriate binary for your operating system from the official DuckDB website.
+
+---
 
 ## Creating and Managing Databases
 
@@ -48,6 +63,8 @@ conn.close()
 with duckdb.connect('my_database.db') as conn:
     conn.execute('CREATE TABLE test (id INTEGER, name VARCHAR)')
 ```
+
+---
 
 ## Working with Tables
 
@@ -92,6 +109,8 @@ with duckdb.connect('company.db') as conn:
             (2, 'Jane Smith', 'HR', 65000.00)
     """)
 ```
+
+---
 
 ## Importing Data
 
@@ -147,6 +166,8 @@ conn.execute("""
 """)
 ```
 
+---
+
 ## Basic Queries
 
 ### SELECT Queries
@@ -191,6 +212,8 @@ FROM departments d
 LEFT JOIN employees e ON d.dept_name = e.department
 GROUP BY d.dept_name;
 ```
+
+---
 
 ## Advanced Features
 
@@ -250,6 +273,8 @@ result = conn.execute("""
     FROM employees
 """).fetchall()
 ```
+---
+
 
 ## Best Practices
 
@@ -286,6 +311,8 @@ ANALYZE employees;
 -- Vacuum database to reclaim space
 VACUUM;
 ```
+---
+
 
 ## Common Use Cases
 
@@ -352,3 +379,15 @@ SELECT
 FROM daily_metrics
 ORDER BY date;
 ```
+---
+
+
+</body>
+
+<style>
+
+a[href] {
+  color: #7fc8b6;
+}
+
+</style>
