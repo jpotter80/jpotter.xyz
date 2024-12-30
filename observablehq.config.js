@@ -8,6 +8,10 @@ export default {
   // lets you organize them into sections and have unlisted pages.
   pages: [
     {
+      name: "Astronomy Picture of the Day",
+      path: "/apod",
+    },
+    {
       name: "Gallery of Work",
       path: "/gallery-of-work",
     },
