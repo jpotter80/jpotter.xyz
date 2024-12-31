@@ -14,45 +14,56 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: 'npm'
       
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install dependencies
         run: npm ci --prefer-offline
+        continue-on-error: false
       
       - name: Clean data caches
         run: |
-          mkdir -p dist/_file/data  # Ensure directory exists before cleaning
+          mkdir -p dist/_file/data
           mkdir -p src/.observablehq/cache/data
           rm -rf dist/_file/data/*
           rm -rf src/.observablehq/cache/data/*
-          echo "Data caches cleared"
       
       - name: Build
         env:
           NODE_ENV: production
+          CI: true
         run: |
-          npm run build
-          echo "Build complete"
+          npm run build || exit 1
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+          retention-days: 1
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
