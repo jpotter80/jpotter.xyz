@@ -59,11 +59,11 @@ jobs:
           echo "Other data caches cleared"
 
       - name: Set up environment
-        run: |
-          echo "NASA_API_KEY=${{ secrets.NASA_API_KEY }}" >> .env
+        run: echo "NASA_API_KEY=${{ secrets.NASA_API_KEY }}" >> $GITHUB_ENV
       
       - name: Build
         env:
+          NASA_API_KEY: ${{ secrets.NASA_API_KEY }}
           NODE_ENV: production
         run: |
           npm run build
