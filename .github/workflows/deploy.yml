@@ -30,61 +30,19 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline
       
-      - name: Manage data caches
+      - name: Clean data caches
         run: |
-          mkdir -p dist/_file/data
+          mkdir -p dist/_file/data  # Ensure directory exists before cleaning
           mkdir -p src/.observablehq/cache/data
-          
-          # Get today's date
-          TODAY=$(date +%Y-%m-%d)
-          
-          # Path to the APOD cache file
-          APOD_CACHE="src/.observablehq/cache/data/apod.json"
-          
-          # Only clear APOD cache if it's from a different day or doesn't exist
-          if [ -f "$APOD_CACHE" ]; then
-            CACHE_DATE=$(cat "$APOD_CACHE" | jq -r '._fetchedAt')
-            if [ "$CACHE_DATE" != "$TODAY" ]; then
-              rm "$APOD_CACHE"
-              echo "APOD cache cleared (old date: $CACHE_DATE, today: $TODAY)"
-            else
-              echo "APOD cache is current, keeping it"
-            fi
-          else
-            echo "No APOD cache found"
-          fi
-          
-          # Clear other data caches if needed
           rm -rf dist/_file/data/*
-          echo "Other data caches cleared"
-
-      - name: Set up environment
-        run: |
-          echo "NASA_API_KEY=${{ secrets.NASA_API_KEY }}" >> .env
-          echo "OBSERVABLE_TELEMETRY_DISABLE=true" >> .env
-
-      - name: Create fallback APOD data
-        run: |
-          echo '{
-            "_fetchedAt": "'$(date +%Y-%m-%d)'",
-            "date": "'$(date +%Y-%m-%d)'",
-            "title": "NASA API Temporarily Unavailable",
-            "explanation": "The NASA APOD API is temporarily unavailable. Please check back later.",
-            "url": "https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png",
-            "media_type": "image"
-          }' > src/.observablehq/cache/data/apod.json
-
+          rm -rf src/.observablehq/cache/data/*
+          echo "Data caches cleared"
+      
       - name: Build
         env:
           NODE_ENV: production
-          NASA_API_KEY: ${{ secrets.NASA_API_KEY }}
-          OBSERVABLE_TELEMETRY_DISABLE: "true"
         run: |
-          npm run build || {
-            echo "Build failed, but continuing with fallback data..."
-            cp src/.observablehq/cache/data/apod.json dist/_file/data/
-            npm run build
-          }
+          npm run build
           echo "Build complete"
       
       - name: Upload artifact
