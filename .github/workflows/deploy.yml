@@ -61,12 +61,30 @@ jobs:
       - name: Set up environment
         run: |
           echo "NASA_API_KEY=${{ secrets.NASA_API_KEY }}" >> .env
-      
+          echo "OBSERVABLE_TELEMETRY_DISABLE=true" >> .env
+
+      - name: Create fallback APOD data
+        run: |
+          echo '{
+            "_fetchedAt": "'$(date +%Y-%m-%d)'",
+            "date": "'$(date +%Y-%m-%d)'",
+            "title": "NASA API Temporarily Unavailable",
+            "explanation": "The NASA APOD API is temporarily unavailable. Please check back later.",
+            "url": "https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png",
+            "media_type": "image"
+          }' > src/.observablehq/cache/data/apod.json
+
       - name: Build
         env:
           NODE_ENV: production
+          NASA_API_KEY: ${{ secrets.NASA_API_KEY }}
+          OBSERVABLE_TELEMETRY_DISABLE: "true"
         run: |
-          npm run build
+          npm run build || {
+            echo "Build failed, but continuing with fallback data..."
+            cp src/.observablehq/cache/data/apod.json dist/_file/data/
+            npm run build
+          }
           echo "Build complete"
       
       - name: Upload artifact
