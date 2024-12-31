@@ -54,6 +54,15 @@ jobs:
             echo "No APOD cache found"
           fi
           
+          # Clear forecast cache every run
+          FORECAST_CACHE="src/.observablehq/cache/data/forecast.json"
+          if [ -f "$FORECAST_CACHE" ]; then
+            rm "$FORECAST_CACHE"
+            echo "Forecast cache cleared"
+          else
+            echo "No forecast cache found"
+          fi
+          
           # Clear other data caches if needed
           rm -rf dist/_file/data/*
           echo "Other data caches cleared"
