@@ -5,7 +5,7 @@ title: Astronomy Picture of the Day
 <body>
 
 # Astronomy Picture of the Day
-Sourced from <a href="https://api.nasa.gov/">NASA.gov api</a>
+Sourced from <a href="https://api.nasa.gov/">NASA.gov</a> api
 
 ---
 
