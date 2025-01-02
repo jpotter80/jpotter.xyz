@@ -22,7 +22,7 @@ const volBaseballHistory = FileAttachment("/data/vol-baseball-history.csv").csv(
 ```js
 Plot.plot({
   width,
-  title: "Tennessee Volunteer Baseball",
+  title: "Tennessee Volunteers Baseball",
   subtitle: "Wins per year",
   x: { label: "Year", type: "linear" },
   y: { grid: true },
@@ -40,7 +40,7 @@ Plot.plot({
 <article class="chart-analysis">
   <header>
   <div>
-    <h3>Tennessee Volunteer Baseball Historical Trajectory</h3>
+    <h3>Tennessee Volunteers Baseball Historical Trajectory</h3>
     <h4>2024/12/15</h4>
   </header>
   <p>
