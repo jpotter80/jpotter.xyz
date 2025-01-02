@@ -60,6 +60,10 @@ export default {
           name: "Python Algorithms",
           path: "/quick-reference/python-algorithms",
         },
+        {
+          name: "SQL",
+          path: "/quick-reference/sql",
+        },
       ],
     },
   ],
