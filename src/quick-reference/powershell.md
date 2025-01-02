@@ -1,6 +1,6 @@
 ---
 theme: [deep-space, wide]
-title: Gallery of Work
+title: Quick Reference
 toc: true,
 ---
 
@@ -14,6 +14,8 @@ toc: true,
 
 PowerShell is a task automation framework and command-line shell from Microsoft. It combines the command-line speed, flexibility, and power of shells like Bash with the familiarity and consistency of the Windows environment and .NET framework.
 
+Visit the <a href="https://learn.microsoft.com/en-us/powershell/">PowerShell Docs</a>
+
 ### Key Features
 - Object-based pipeline
 - Integrated scripting language
@@ -21,7 +23,7 @@ PowerShell is a task automation framework and command-line shell from Microsoft.
 - Automation platform
 - Configuration management framework
 
-<a href="https://learn.microsoft.com/en-us/powershell/">Visit the PowerShell Docs</a>
+
 
 ---
 

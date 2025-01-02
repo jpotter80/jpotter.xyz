@@ -1,6 +1,6 @@
 ---
 theme: [deep-space, wide]
-title: Gallery of Work
+title: Quick Reference
 toc: true,
 ---
 
@@ -8,7 +8,7 @@ toc: true,
 
 # Linux System Administration Command Line Guide
 
-<a href="https://ubuntu.com/tutorials/command-line-for-beginners#1">Visit ubuntu.com</a> for a beginner's tutorial of the command line.
+Visit <a href="https://ubuntu.com/tutorials/command-line-for-beginners#1">ubuntu.com</a> for a beginner's tutorial of the command line.
 
 
 

@@ -1,6 +1,6 @@
 ---
 theme: [deep-space, wide]
-title: Gallery of Work
+title: Quick Reference
 toc: true,
 ---
 
@@ -8,7 +8,7 @@ toc: true,
 
 # Neovim Text Editor Cheatsheet
 
-<a href="https://neovim.io/">Visit neovim.io</a> or the repo at <a href="https://github.com/neovim/neovim">GitHub</a>
+Visit <a href="https://neovim.io/">neovim.io</a> or the repo at <a href="https://github.com/neovim/neovim">GitHub</a>
 
 ---
 

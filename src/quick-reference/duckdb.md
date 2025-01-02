@@ -14,7 +14,7 @@ toc: true,
 
 DuckDB is an embedded analytical database system that provides fast and efficient data processing capabilities. It's designed to handle both small and large datasets with excellent performance, particularly for analytical queries.
 
-<a href="https://duckdb.org/">Visit duckdb.org</a>
+Visit <a href="https://duckdb.org/">duckdb.org</a>
 
 ---
 

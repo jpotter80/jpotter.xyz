@@ -41,8 +41,8 @@ export default {
           path: "/quick-reference/gnu-coreutils",  
         },
         {
-          name: "Kubuntu Keyboard Shortcuts",
-          path: "/quick-reference/kubuntu-keyboard-shortcuts",
+          name: "KWin for KDE",
+          path: "/quick-reference/kwin",
         },
         {
           name: "Linux System Administration",

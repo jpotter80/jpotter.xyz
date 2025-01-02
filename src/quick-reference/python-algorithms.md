@@ -1,6 +1,6 @@
 ---
 theme: [deep-space, wide]
-title: Gallery of Work
+title: Quick Reference
 toc: true,
 ---
 
