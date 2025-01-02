@@ -21,7 +21,22 @@ export default {
     },
     {
       name: "Viz Journal",
-      path: "/viz-journal",
+      collapsible: true,
+      open: true,
+      pages: [
+        {
+          name: "Hurricane Helene Rainfall Analysis",
+          path: "/viz-journal/hurricane-helene-rainfall",
+        },
+        {
+          name: "Tennessee Volunteers Baseball Historical Wins",
+          path: "/viz-journal/tennessee-volunteers-baseball-historical-wins",
+        },
+        {
+          name: "2024 CFP Team Comparison",
+          path: "/viz-journal/2024-cfp-team-comparison",
+        },
+      ],
     },
     {
       name: "Quick Reference",
