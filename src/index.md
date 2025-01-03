@@ -1,5 +1,4 @@
 ---
-toc: true,
 theme: [deep-space, wide]
 title: Home
 ---
