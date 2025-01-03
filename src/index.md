@@ -159,7 +159,7 @@ title: Home
   flex-direction: column;
   align-items: center;
   margin: 4rem 0 8rem;
-  font-size: 24px;
+  font-size: 20px;
   text-wrap: balance;
   color: var(--theme-foreground-muted);
 }
