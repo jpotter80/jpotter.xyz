@@ -5,7 +5,7 @@ title: My Weather
 
 <div class="hero">
   <h1>Black Mountain,NC<br>Weather Report</h1>
-  <h2>7-day forecast sourced from the National Weather Service api</h2>
+  <h2>7-day forecast sourced from the <a href="https://www.weather.gov/documentation/services-web-api">National Weather Service</a> api</h2>
   </div>
 
 

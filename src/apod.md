@@ -9,7 +9,7 @@ title: Astronomy Picture of the Day
   Astronomy Picture of the Day
   </h1>
   <h2>
-  Sourced from <a href="https://api.nasa.gov/">NASA.gov</a> api
+  Sourced from the <a href="https://api.nasa.gov/">NASA.gov</a> api
   </h2>
 </div>
 
@@ -23,7 +23,7 @@ const apod = FileAttachment("./data/apod.json").json();
 ```js
 display(
   html`<div class="space-y-4">
-    <h1 class="text-2xl font-bold">${apod.title}</h1>
+    <h3 class="text-2xl font-bold">${apod.title}</h3>
     ${apod.media_type === 'video' 
       ? html`<iframe src="${apod.url}" width="100%" height="400" frameborder="0"></iframe>`
       : html`<img src="${apod.url}" alt="${apod.title}" style="max-width: 100%; height: auto;" />`
@@ -56,7 +56,7 @@ display(
   margin: 1rem 0;
   padding: 1rem 0;
   max-width: none;
-  font-size: 6vw;
+  font-size: 14vw;
   font-weight: 900;
   line-height: 1;
   color: #7fc8b6;
