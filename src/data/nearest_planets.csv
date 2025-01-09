@@ -1,0 +1,21 @@
+planet_name,star_name,distance_parsecs,mass_earth,radius_earth,temp_kelvin,star_type,discovery_method,discovery_year
+Proxima Cen b,Proxima Cen,1.30,1.070,1.030,234,M5.5 V,Radial Velocity,2016
+Barnard b,Barnard's star,1.83,0.370,0.764,400,M3.5-4 V,Radial Velocity,2024
+GJ 887 c,GJ 887,3.29,7.600,2.670,352,M1 V,Radial Velocity,2020
+GJ 887 b,GJ 887,3.29,4.200,1.880,468,M1 V,Radial Velocity,2020
+Ross 128 b,Ross 128,3.38,1.400,1.110,301,M4,Radial Velocity,2017
+GJ 15 A b,GJ 15 A,3.56,3.030,1.550,550,M1,Radial Velocity,2014
+eps Ind A b,eps Ind A,3.64,2005.497,12.700,275,K5 V,Radial Velocity,2019
+YZ Cet b,YZ Cet,3.71,0.700,0.913,471,M4.5 V,Radial Velocity,2017
+YZ Cet d,YZ Cet,3.71,1.090,1.030,357,M4.5 V,Radial Velocity,2017
+YZ Cet c,YZ Cet,3.71,1.140,1.050,410,M4.5 V,Radial Velocity,2017
+Teegarden's Star c,Teegarden's Star,3.83,1.050,1.020,209,M7.0 V,Radial Velocity,2019
+Teegarden's Star d,Teegarden's Star,3.83,0.820,0.954,159,M7.0 V,Radial Velocity,2024
+Teegarden's Star b,Teegarden's Star,3.83,1.160,1.050,277,M7.0 V,Radial Velocity,2019
+GJ 1002 c,GJ 1002,4.85,1.360,1.100,182,M5.5 V,Radial Velocity,2022
+GJ 1002 b,GJ 1002,4.85,1.080,1.030,231,M5.5 V,Radial Velocity,2022
+GJ 251 b,GJ 251,5.58,4.000,1.830,351,M3.0 V,Radial Velocity,2020
+GJ 411 b,GJ 411,5.68,2.690,1.450,350,M1.5 V,Radial Velocity,2019
+HD 20794 c,HD 20794,6.00,2.400,1.350,508,G8 V,Radial Velocity,2011
+HD 20794 d,HD 20794,6.00,4.800,2.040,388,G8 V,Radial Velocity,2011
+HD 20794 b,HD 20794,6.00,2.700,1.450,660,G8 V,Radial Velocity,2011

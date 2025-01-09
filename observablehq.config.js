@@ -25,6 +25,10 @@ export default {
       open: true,
       pages: [
         {
+          name: "Earth's Nearest Neighbors",
+          path: "/viz-journal/nearest-exoplanets",
+        },
+        {
           name: "Hurricane Helene Rainfall Analysis",
           path: "/viz-journal/hurricane-helene-rainfall",
         },
