@@ -13,7 +13,7 @@ title: Viz Journal
     <h2>Analyses of Interests</h2>
   </div>
 
-
+---
 
 ```js
 const weather = FileAttachment("/data/weather.csv").csv({typed: true})
@@ -40,6 +40,8 @@ Plot.plot({
   ]
 })
 ```
+
+---
 
 <article class="chart-analysis">
   <header>
