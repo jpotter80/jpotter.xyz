@@ -36,7 +36,7 @@ Plot.plot({
       y: "mass_earth",
       stroke: "temp_kelvin",
       r: "radius_earth",
-      label: "planet_name",
+      channels: {name: "planet_name"}, // Add this line
       tip: true
     })
   ]
