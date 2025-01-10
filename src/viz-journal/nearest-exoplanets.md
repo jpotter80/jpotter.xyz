@@ -23,7 +23,7 @@ const exoplanetData = FileAttachment("/data/nearest_planets.csv").csv({typed: tr
 ```js
 Plot.plot({
   color: { legend: true, scheme: "Turbo" },
-  title: "The 20 Closest Confirmed Exoplanets",
+  title: "20 Closest Confirmed Exoplanets",
   subtitle: "Parsecs from Earth",
   x: { grid: true },
   y: { type: "log", grid: true },
@@ -53,7 +53,7 @@ Plot.plot({
 </header>
 
 <p>
-  The closest 20 confirmed exoplanets to Earth represent an incredible variety in their physical characteristics, with distances ranging from 1.30 to 6 parsecs from our solar system. This means our closest planetary neighbors are within just 4-12 light-years of Earth.
+  The closest 20 confirmed exoplanets to Earth represent an incredible variety in their physical characteristics, with distances ranging from 1.30 to 6 parsecs from our solar system. This means our closest planetary neighbors are within just 4-20 light-years of Earth.
 </p>
 <p>
   Proxima Centauri b, our nearest known exoplanet at just 1.30 parsecs (approximately 4.2 light-years) from Earth, orbits a small red dwarf star. This planet, with a mass of 1.07 Earth masses and a radius of 1.03 Earth radii, is remarkably similar in size to our own planet. Its equilibrium temperature of 234K (-39°C), while cold by Earth standards, places it in a potentially interesting range for planetary science studies.
