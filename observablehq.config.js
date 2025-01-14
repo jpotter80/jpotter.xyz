@@ -29,6 +29,10 @@ export default {
           path: "/viz-journal/nearest-exoplanets",
         },
         {
+          name: "Exoplanet Heatmap",
+          path: "/viz-journal/exoplanet-heatmap",
+        },
+        {
           name: "Hurricane Helene Rainfall Analysis",
           path: "/viz-journal/hurricane-helene-rainfall",
         },
