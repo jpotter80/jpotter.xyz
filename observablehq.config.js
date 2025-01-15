@@ -12,8 +12,8 @@ export default {
       path: "/apod",
     },
     {
-      name: "Gallery of Work",
-      path: "/gallery-of-work",
+      name: "Gallery of Projects",
+      path: "/gallery-of-projects",
     },
     {
       name: "My Weather",

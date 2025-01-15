@@ -1,12 +1,12 @@
 ---
 theme: [deep-space, wide]
-title: Gallery of Work
+title: Gallery of Projects
 ---
 
 <body>
 
 <div class="hero">
-<h1>Gallery of Work</h1>
+<h1>Gallery of Projects</h1>
 </div>
 
 ---
