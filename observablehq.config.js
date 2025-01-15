@@ -60,6 +60,10 @@ export default {
           path: "/quick-reference/duckdb",
         },
         {
+          name: "Excel",
+          path: "/quick-reference/excel",
+        },
+        {
           name: "GNU Coreutils",
           path: "/quick-reference/gnu-coreutils",  
         },
@@ -86,6 +90,10 @@ export default {
         {
           name: "SQL",
           path: "/quick-reference/sql",
+        },
+        {
+          name: "Statistics & Machine Learning",
+          path: "/quick-reference/stats-ml",
         },
       ],
     },

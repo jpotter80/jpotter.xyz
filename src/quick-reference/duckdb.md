@@ -6,379 +6,336 @@ toc: true,
 
 <body>
 
-# Practical Guide to Using DuckDB Locally
+# DuckDB CLI and Observable Framework Reference Guide
 
 ---
 
-## Introduction
+## DuckDB CLI Commands
 
-DuckDB is an embedded analytical database system that provides fast and efficient data processing capabilities. It's designed to handle both small and large datasets with excellent performance, particularly for analytical queries.
+### Starting DuckDB
 
-Visit <a href="https://duckdb.org/">duckdb.org</a>
+Basic CLI startup:
+```bash
+# Start with new in-memory database
+duckdb
 
----
+# Open existing database
+duckdb database.db
 
-## Installation
-
-### Python
-```python
-pip install duckdb
+# Start with specific config
+duckdb -readonly database.db
 ```
 
-### R
-```R
-install.packages("duckdb")
-```
+### Essential Dot Commands
 
-### CLI
-Download the appropriate binary for your operating system from the official DuckDB website.
-
----
-
-## Creating and Managing Databases
-
-### Creating a New Database
-```python
-import duckdb
-
-# Create a new database (or connect to existing one)
-conn = duckdb.connect('my_database.db')
-
-# In-memory database
-conn = duckdb.connect(':memory:')
-```
-
-### Managing Connections
-```python
-# Create connection
-conn = duckdb.connect('my_database.db')
-
-# Execute queries
-conn.execute('CREATE TABLE test (id INTEGER, name VARCHAR)')
-
-# Always close connections when done
-conn.close()
-
-# Using context manager (recommended)
-with duckdb.connect('my_database.db') as conn:
-    conn.execute('CREATE TABLE test (id INTEGER, name VARCHAR)')
-```
-
----
-
-## Working with Tables
-
-### Creating Tables
 ```echo sql
--- Basic table creation
-CREATE TABLE employees (
-    id INTEGER PRIMARY KEY,
-    name VARCHAR,
-    department VARCHAR,
-    salary DECIMAL(10,2)
-);
+-- Show all dot commands
+.help
 
--- Create table with constraints
-CREATE TABLE departments (
-    dept_id INTEGER PRIMARY KEY,
-    dept_name VARCHAR NOT NULL UNIQUE,
-    location VARCHAR
-);
+-- Exit CLI
+.exit
+
+-- Show tables
+.tables
+
+-- Show schemas
+.schemas
+
+-- Show table structure
+.schema TABLE_NAME
+
+-- Show database configuration
+.show
+
+-- Enable timing of queries
+.timer on/off
+
+-- Import data
+.import FILE_PATH TABLE_NAME
+
+-- Export data
+.export TABLE_NAME FILE_PATH
+
+-- Load extension
+.load extension_name
+
+-- List installed extensions
+.extensions
 ```
 
-### Python Implementation
-```python
-import duckdb
+### Query Output Formatting
 
-with duckdb.connect('company.db') as conn:
-    # Create table
-    conn.execute("""
-        CREATE TABLE employees (
-            id INTEGER PRIMARY KEY,
-            name VARCHAR,
-            department VARCHAR,
-            salary DECIMAL(10,2)
-        )
-    """)
-    
-    # Insert data
-    conn.execute("""
-        INSERT INTO employees (id, name, department, salary)
-        VALUES 
-            (1, 'John Doe', 'IT', 75000.00),
-            (2, 'Jane Smith', 'HR', 65000.00)
-    """)
+```echo sql
+-- Set output mode
+.mode FORMAT
+-- Available formats: ascii, csv, column, html, insert, json, line, list, markdown, table, tabs
+
+-- Set headers on/off
+.headers on/off
+
+-- Set column separator
+.separator STRING
+
+-- Set null display string
+.nullvalue STRING
 ```
 
 ---
 
-## Importing Data
+## CLI Configuration
 
-### Reading CSV Files
-```python
-import duckdb
+### Memory Settings
 
-conn = duckdb.connect('analytics.db')
+```echo sql
+-- Set memory limit
+SET memory_limit='4GB';
 
-# Direct CSV import into new table
-conn.execute("""
-    CREATE TABLE sales AS 
-    SELECT * FROM read_csv_auto('sales_data.csv')
-""")
-
-# Import with specific options
-conn.execute("""
-    CREATE TABLE customers AS 
-    SELECT * FROM read_csv(
-        'customers.csv',
-        header=True,
-        delimiter=',',
-        columns={
-            'customer_id': 'INTEGER',
-            'name': 'VARCHAR',
-            'email': 'VARCHAR'
-        }
-    )
-""")
-
-# Reading CSV into existing table
-conn.execute("""
-    INSERT INTO sales 
-    SELECT * FROM read_csv_auto('new_sales.csv')
-""")
+-- Set temp directory
+SET temp_directory='/path/to/temp';
 ```
 
-### Reading Parquet Files
-```python
-# Import Parquet file
-conn.execute("""
-    CREATE TABLE transactions AS 
-    SELECT * FROM read_parquet('transactions.parquet')
-""")
-```
+### Query Settings
 
-### Reading JSON Files
-```python
-# Import JSON file
-conn.execute("""
-    CREATE TABLE users AS 
-    SELECT * FROM read_json_auto('users.json')
-""")
+```echo sql
+-- Enable parallel execution
+SET enable_progress_bar=true;
+
+-- Set threads
+SET threads=4;
+
+-- Enable profiling
+SET enable_profiling=true;
 ```
 
 ---
 
-## Basic Queries
+## File Operations
 
-### SELECT Queries
+### CSV Operations
 
 ```echo sql
--- Basic SELECT
-SELECT * FROM employees;
+-- Import CSV
+COPY table_name FROM 'file.csv' (HEADER, DELIMITER ',');
 
--- Filtered SELECT
-SELECT name, salary 
-FROM employees 
-WHERE department = 'IT' 
-  AND salary > 60000;
+-- Export CSV
+COPY table_name TO 'output.csv' (HEADER, DELIMITER ',');
 
--- Aggregations
-SELECT 
-    department,
-    COUNT(*) as employee_count,
-    AVG(salary) as avg_salary
-FROM employees
-GROUP BY department
-HAVING COUNT(*) > 5
-ORDER BY avg_salary DESC;
+-- Read CSV directly
+SELECT * FROM read_csv_auto('file.csv');
 ```
 
-### JOIN Operations
+### Parquet Operations
 
 ```echo sql
--- Inner JOIN
-SELECT 
-    e.name,
-    d.dept_name,
-    e.salary
-FROM employees e
-JOIN departments d ON e.department = d.dept_name;
+-- Import Parquet
+CREATE TABLE table_name AS SELECT * FROM parquet_scan('file.parquet');
 
--- LEFT JOIN with aggregation
-SELECT 
-    d.dept_name,
-    COUNT(e.id) as employee_count
-FROM departments d
-LEFT JOIN employees e ON d.dept_name = e.department
-GROUP BY d.dept_name;
+-- Export Parquet
+COPY table_name TO 'output.parquet' (FORMAT PARQUET);
 ```
 
 ---
 
-## Advanced Features
+## Query Execution
 
-### Window Functions
-```echo sql
-
--- Row numbers per department
-SELECT 
-    name,
-    department,
-    salary,
-    ROW_NUMBER() OVER (PARTITION BY department ORDER BY salary DESC) as salary_rank
-FROM employees;
-
--- Running totals
-SELECT 
-    date,
-    amount,
-    SUM(amount) OVER (ORDER BY date) as running_total
-FROM transactions;
-```
-
-### Common Table Expressions (CTEs)
+### Transaction Control
 
 ```echo sql
-WITH department_stats AS (
-    SELECT 
-        department,
-        AVG(salary) as avg_salary,
-        COUNT(*) as emp_count
-    FROM employees
-    GROUP BY department
-)
-SELECT 
-    e.name,
-    e.salary,
-    ds.avg_salary,
-    (e.salary - ds.avg_salary) as salary_diff
-FROM employees e
-JOIN department_stats ds ON e.department = ds.department
-WHERE e.salary > ds.avg_salary;
+-- Start transaction
+BEGIN TRANSACTION;
+
+-- Commit transaction
+COMMIT;
+
+-- Rollback transaction
+ROLLBACK;
 ```
 
-### User-Defined Functions
-```python
-import duckdb
+### Query Profiling
 
-# Create a simple UDF
-conn.create_function('double_salary', lambda x: x * 2)
+```echo sql
+-- Enable profiling
+PRAGMA enable_profiling;
 
-# Use the UDF in a query
-result = conn.execute("""
-    SELECT 
-        name,
-        salary,
-        double_salary(salary) as doubled_salary
-    FROM employees
-""").fetchall()
+-- Show last profile
+PRAGMA show_profiling;
 ```
+
 ---
 
+## Observable Framework Integration
 
-## Best Practices
+### Basic Setup
 
-### Performance Optimization
-1. Use appropriate data types for columns
-2. Create indexes for frequently queried columns:
-```echo sql
-CREATE INDEX idx_employee_department ON employees(department);
+```echo js
+// Import DuckDB
+import * as duckdb from "npm:@duckdb/duckdb-wasm";
+import {DuckDBClient} from "npm:@observablehq/duckdb";
+
+// Create client with table
+const db = DuckDBClient.of({
+  tableName: FileAttachment("data.parquet")
+});
 ```
 
-3. Partition large tables when appropriate:
-```echo sql
-CREATE TABLE sales_partitioned (
-    date DATE,
-    product_id INTEGER,
-    amount DECIMAL(10,2)
-) PARTITION BY RANGE (date);
+### Query Execution Methods
+
+```echo js
+// Using sql tagged template
+const result = await db.sql`
+  SELECT * FROM tableName 
+  WHERE column > 10
+`;
+
+// Using query method
+const result = await db.query("SELECT * FROM tableName");
+
+// Using queryRow for single row
+const row = await db.queryRow("SELECT COUNT(*) FROM tableName");
 ```
 
-### Memory Management
-```python
-# Set memory limit
-conn.execute("SET memory_limit='4GB'")
+### Configuration in Observable Framework
 
-# Enable parallel processing
-conn.execute("SET threads TO 4")
+```echo js
+// Framework configuration
+export default {
+  duckdb: {
+    extensions: {
+      // Enable with default settings
+      spatial: true,
+      
+      // Enable with custom settings
+      json: {
+        source: "core",
+        install: true,
+        load: true
+      },
+      
+      // Install but don't load
+      h3: false
+    }
+  }
+};
 ```
 
-### Database Maintenance
-```echo sql
--- Analyze table statistics
-ANALYZE employees;
+### Working with Extensions
 
--- Vacuum database to reclaim space
-VACUUM;
+```echo js
+// Create client with specific extensions
+const db = await DuckDBClient.of({}, {
+  extensions: ["spatial", "json"]
+});
+
+// Check loaded extensions
+await db.sql`
+  SELECT * FROM duckdb_extensions()
+  WHERE loaded = true
+`;
 ```
+
+### File Attachments
+
+```echo js
+// Working with various file types
+const db = DuckDBClient.of({
+  csv_data: FileAttachment("data.csv"),
+  parquet_data: FileAttachment("data.parquet"),
+  json_data: FileAttachment("data.json")
+});
+
+// Using in queries
+const result = await db.sql`
+  SELECT * FROM csv_data
+  JOIN parquet_data USING (id)
+`;
+```
+
 ---
 
+## Extensions Management
 
-## Common Use Cases
+### Core Extensions
 
-### Data Analysis Pipeline
-```python
-import duckdb
-import pandas as pd
-
-# Connect to database
-conn = duckdb.connect('analytics.db')
-
-# Load and transform data
-conn.execute("""
-    CREATE TABLE daily_sales AS
-    WITH daily_totals AS (
-        SELECT 
-            date_trunc('day', timestamp) as date,
-            product_id,
-            SUM(amount) as total_sales
-        FROM sales
-        GROUP BY 1, 2
-    )
-    SELECT 
-        d.date,
-        d.product_id,
-        p.product_name,
-        d.total_sales,
-        LAG(d.total_sales) OVER (
-            PARTITION BY d.product_id 
-            ORDER BY d.date
-        ) as prev_day_sales
-    FROM daily_totals d
-    JOIN products p ON d.product_id = p.id
-""")
-
-# Export results to pandas
-df = conn.execute("""
-    SELECT * 
-    FROM daily_sales 
-    ORDER BY date, product_id
-""").df()
-```
-
-### Time-Series Analysis
 ```echo sql
-WITH daily_metrics AS (
-    SELECT 
-        date_trunc('day', timestamp) as date,
-        COUNT(*) as transaction_count,
-        SUM(amount) as total_amount,
-        COUNT(DISTINCT customer_id) as unique_customers
-    FROM transactions
-    GROUP BY 1
-)
-SELECT 
-    date,
-    transaction_count,
-    total_amount,
-    unique_customers,
-    AVG(total_amount) OVER (
-        ORDER BY date
-        ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
-    ) as seven_day_moving_avg
-FROM daily_metrics
-ORDER BY date;
+-- Load core extension
+LOAD 'json';
+LOAD 'spatial';
+
+-- Install extension
+INSTALL 'spatial';
+
+-- Load and install
+LOAD 'spatial';
 ```
+
+### Extension Configuration
+
+In Observable Framework:
+```echo js
+export default {
+  duckdb: {
+    extensions: {
+      // Core extensions
+      json: true,
+      spatial: true,
+      
+      // Community extensions
+      h3: {
+        source: "community",
+        install: true,
+        load: true
+      },
+      
+      // Custom repository
+      custom_ext: {
+        source: "https://custom-repo.com/extensions",
+        install: true,
+        load: true
+      }
+    }
+  }
+};
+```
+
+### Common Extensions and Use Cases
+
+1. **spatial**: Geographic operations
+```echo sql
+SELECT ST_GeomFromText('POINT(0 0)');
+```
+
+2. **json**: JSON handling
+```echo sql
+SELECT json_extract('{"a": 1}', '$.a');
+```
+
+3. **httpfs**: Remote file access
+```echo sql
+SELECT * FROM parquet_scan('s3://bucket/file.parquet');
+```
+
+### Best Practices
+
+1. **Extension Loading**:
+   - Load extensions at startup
+   - Verify extension loading with `duckdb_extensions()`
+   - Handle dependencies between extensions
+
+2. **Performance**:
+   - Use appropriate file formats (Parquet preferred)
+   - Enable parallel execution when possible
+   - Monitor memory usage
+
+3. **Error Handling**:
+   - Check extension availability before use
+   - Handle loading failures gracefully
+   - Verify data compatibility
+
+4. **Security**:
+   - Use read-only mode when appropriate
+   - Validate file paths
+   - Control extension access
+
 ---
 
 
