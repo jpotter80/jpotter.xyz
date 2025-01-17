@@ -96,13 +96,13 @@ Type: ${d.st_spectype || "Unknown"}`,
 </header>
 
 <p>
-The Hertzsprung-Russell diagram of confirmed exoplanet host stars reveals fascinating insights into the types of stars where we've discovered planets. This visualization, created from NASA Exoplanet Archive data through January 2025, plots stellar temperature against luminosity for over 5,800 stars known to host exoplanets, providing a snapshot of where planetary systems are found in our galactic neighborhood.
+The Hertzsprung-Russell diagram of confirmed exoplanet host stars reveals fascinating insights into the types of stars where we've discovered planets. This visualization, created from NASA Exoplanet Archive data through January 2025, plots stellar temperature against luminosity for over 1,500 stars known to host exoplanets, providing a snapshot of where planetary systems are found in our galactic neighborhood.
 </p>
 <p>
 The distribution of host stars shows a clear concentration along the main sequence, stretching from hot, luminous B-type stars (log T ≈ 4.5, log L ≈ 3) to cooler, dimmer K and M dwarfs. This main sequence clustering reflects both the natural abundance of such stars and the selection effects of our planet-finding techniques. The data includes several notable B-type stars at the diagram's upper left, including mu2 Scorpii with a surface temperature of 21,700K and luminosity 3.8 times solar, demonstrating that planets can form and survive around massive, hot stars.
 </p>
 <p>
-Several distinct populations emerge in the data. There's a significant population of evolved giants in the upper right region of the diagram, indicating that many planetary systems persist through their host stars' post-main-sequence evolution. Of particular interest is the presence of compact objects like DP Leo, a white dwarf with extremely low luminosity (log L ≈ -2.4) but high temperature (13,500K), providing evidence that planets can survive the dramatic stellar evolution process.
+Several distinct populations emerge in the data. There's a significant population of evolved giants in the upper right region of the diagram, indicating that many planetary systems persist through their host stars' post-main-sequence evolution. Of particular interest is the presence of compact objects like KOI-55, a subdwarf B-type with a luminosity comparable to our Sun (log L ≈ 1.36), but high temperature (27,730K), providing evidence that planets can survive the dramatic stellar evolution process.
 </p>
 <p>
 The temperature distribution of host stars shows interesting gaps, particularly around log T = 4.0-4.2. This may reflect genuine differences in planetary system formation or survival rates around stars of different masses, but could also be influenced by observational biases in our planet-detection methods. The relative scarcity of the hottest stars (T > 30,000K) in our sample is likely due to both their natural rarity and the challenges of detecting planets around such bright, massive stars.
