@@ -44,6 +44,10 @@ export default {
           name: "Exoplanet Heatmap - 2025/01",
           path: "/viz-journal/exoplanet-heatmap",
         },
+        {
+          name: "Exoplanet Host Stars - 2025/01",
+          path: "/viz-journal/hr-diagram",
+        },
       ],
     },
     {
