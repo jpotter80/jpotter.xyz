@@ -25,24 +25,24 @@ export default {
       open: true,
       pages: [
         {
-          name: "Earth's Nearest Neighbors",
-          path: "/viz-journal/nearest-exoplanets",
-        },
-        {
-          name: "Exoplanet Heatmap",
-          path: "/viz-journal/exoplanet-heatmap",
-        },
-        {
-          name: "Hurricane Helene Rainfall Analysis",
+          name: "Hurricane Helene Rainfall - 2024/12",
           path: "/viz-journal/hurricane-helene-rainfall",
         },
         {
-          name: "Tennessee Volunteers Baseball Historical Wins",
+          name: "Tennessee Volunteers Baseball Historical Wins - 2024/12",
           path: "/viz-journal/tennessee-volunteers-baseball-historical-wins",
         },
         {
-          name: "2024 CFP Team Comparison",
+          name: "2024 CFP Team Comparison - 2024/12",
           path: "/viz-journal/2024-cfp-team-comparison",
+        },
+        {
+          name: "Earth's Nearest Neighbors - 2025/01",
+          path: "/viz-journal/nearest-exoplanets",
+        },
+        {
+          name: "Exoplanet Heatmap - 2025/01",
+          path: "/viz-journal/exoplanet-heatmap",
         },
       ],
     },
@@ -65,7 +65,7 @@ export default {
         },
         {
           name: "GNU Coreutils",
-          path: "/quick-reference/gnu-coreutils",  
+          path: "/quick-reference/gnu-coreutils",
         },
         {
           name: "KWin for KDE",
