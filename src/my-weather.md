@@ -107,7 +107,7 @@ display(
     title: "7-day dewpoint forecast",
     width,
     x: {type: "utc", ticks: "day", label: null},
-    y: {grid: true, inset: 10, label: "Percent (%)", domain: [-20, 100]},
+    y: {grid: true, inset: 10, label: "Percent (%)", domain: [-30, 100]},
     marks: [
       Plot.ruleY([0]),
       Plot.areaY(forecast.properties.periods, {

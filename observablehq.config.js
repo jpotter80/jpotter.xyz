@@ -48,6 +48,10 @@ export default {
           name: "Exoplanet Host Stars - 2025/01",
           path: "/viz-journal/hr-diagram",
         },
+        {
+          name: "Historical January Temperatures - 2025/01",
+          path: "/viz-journal/january-temps",
+        }
       ],
     },
     {
