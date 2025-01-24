@@ -17,7 +17,7 @@ title: Viz Journal
 ---
 
 ```js
-const january_temps = FileAttachment("/data/january_temps_mean.csv").csv({typed: true})
+const january_temps = FileAttachment("/data/sample_january_temps_mean.csv").csv({typed: true})
 ```
 
 ```js
