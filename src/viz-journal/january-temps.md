@@ -23,7 +23,7 @@ const january_temps = FileAttachment("/data/january_temps_mean.csv").csv({typed:
 ```js
 Plot.plot({
   //frame: true,
-  title: "Average Maximum Temperature (Asheville,NC): January 20-22",
+  title: "Average Maximum Temperature (Asheville, NC): January 20-22",
   subtitle: "3-day mean temperatures for selected dates, 1903-2025",
   width,
   grid: true,
