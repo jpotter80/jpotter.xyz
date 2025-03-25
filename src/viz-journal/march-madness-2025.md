@@ -52,7 +52,7 @@ As the 2025 NCAA Tournament narrows to the Sweet 16, a clear hierarchy has emerg
 </p>
 
 <p>
-The SEC has flexed its muscles in this tournament, placing six teams in the Sweet 16—more than any other conference. Auburn, Tennessee, Alabama, Kentucky, Mississippi, and Arkansas all represent the powerhouse conference, showcasing the SEC's depth and quality. The Big Ten follows with four representatives (Michigan State, Maryland, Purdue, and Michigan), while the Big 12 features three teams (Houston, Texas Tech, and BYU). This conference distribution challenges the traditional notion of ACC dominance, with Duke standing as the conference's lone representative.
+The SEC has flexed its muscles in this tournament, placing seven teams in the Sweet 16—more than any other conference. Auburn, Florida, Tennessee, Alabama, Kentucky, Mississippi, and Arkansas all represent the powerhouse conference, showcasing the SEC's depth and quality. The Big Ten follows with four representatives (Michigan State, Maryland, Purdue, and Michigan), while the Big 12 features three teams (Houston, Texas Tech, and BYU). This conference distribution challenges the traditional notion of ACC dominance, with Duke standing as the conference's lone representative.
 </p>
 
 <p>
