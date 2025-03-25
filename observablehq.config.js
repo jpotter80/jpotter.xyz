@@ -51,7 +51,11 @@ export default {
         {
           name: "Historical January Temperatures - 2025/01",
           path: "/viz-journal/january-temps",
-        }
+        },
+        {
+          name: "March Madness 2025 - 2025/03",
+          path: "/viz-journal/march-madness-2025",
+        },
       ],
     },
     {
