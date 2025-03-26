@@ -1,8 +1,6 @@
 ---
 theme: [deep-space, wide]
 title: Viz Journal
-sql:
-  exoplanetData: /data/nearest_planets.csv
 ---
 <head>
 
@@ -73,11 +71,6 @@ Plot.plot({
 
 ---
 
-```sql
-SELECT * FROM exoplanetData;
-```
-
----
 
 </article>
 

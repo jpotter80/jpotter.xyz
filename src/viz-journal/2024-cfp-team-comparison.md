@@ -1,8 +1,6 @@
 ---
 theme: [deep-space, wide]
 title: Viz Journal
-sql:
-  cfpData: /data/cfp-bracket.csv
 ---
 <head>
 
@@ -117,11 +115,6 @@ A deeper analysis reveals an inverse relationship between offensive output and s
 
 ---
 
-```sql
-SELECT * FROM cfpData;
-```
-
----
 
 </article>
 
