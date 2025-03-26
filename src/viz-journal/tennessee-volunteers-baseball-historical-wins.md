@@ -67,9 +67,8 @@ Plot.plot({
 ---
 
 ```sql
-SELECT * FROM volBaseballHistory
+SELECT * FROM volBaseballHistory;
 ```
-
 ---
 
 

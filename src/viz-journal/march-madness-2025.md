@@ -82,7 +82,7 @@ When examining strength of schedule, Alabama stands out with the toughest slate 
 
 ---
 ```sql
-SELECT * FROM marchMadnessData
+SELECT * FROM marchMadnessData;
 ```
 ---
 

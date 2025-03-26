@@ -74,7 +74,7 @@ Plot.plot({
 ---
 
 ```sql
-SELECT * FROM exoplanetData
+SELECT * FROM exoplanetData;
 ```
 
 ---

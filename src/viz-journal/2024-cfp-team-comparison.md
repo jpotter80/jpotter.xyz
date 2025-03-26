@@ -118,7 +118,7 @@ A deeper analysis reveals an inverse relationship between offensive output and s
 ---
 
 ```sql
-SELECT * FROM cfpData
+SELECT * FROM cfpData;
 ```
 
 ---
