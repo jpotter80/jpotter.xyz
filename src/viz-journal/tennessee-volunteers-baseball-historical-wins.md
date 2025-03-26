@@ -1,8 +1,6 @@
 ---
 theme: [deep-space, wide]
 title: Viz Journal
-sql:
-  volBaseballHistory: /data/vol-baseball-history.csv
 ---
 <head>
 
@@ -66,10 +64,7 @@ Plot.plot({
 
 ---
 
-```sql
-SELECT * FROM volBaseballHistory LIMIT 10;
-```
----
+
 
 
 </article>

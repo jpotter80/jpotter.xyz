@@ -1,8 +1,6 @@
 ---
 theme: [deep-space, wide]
 title: Viz Journal
-sql:
-  weather: /data/weather.csv
 ---
 <head>
 
@@ -79,11 +77,6 @@ Plot.plot({
 
 ---
 
-```sql
-SELECT * FROM weather
-```
-
----
 
 </body>
 
