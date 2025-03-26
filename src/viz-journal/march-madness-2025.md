@@ -1,6 +1,8 @@
 ---
 theme: [deep-space, wide]
 title: Viz Journal
+sql:
+  marchMadnessData: /data/march-madness.csv
 ---
 <head>
 
@@ -33,8 +35,19 @@ Plot.plot({
       stroke: "Team",
       r: "AdjEffMargin",
       tip: true
+    }),
+
+    Plot.text(marchMadnessData, {
+      x: "ORtg",
+      y: "DRtg",
+      text: "Team",
+      dx: 14,  // Shift labels 12 pixels right of points
+      dy: -9,  // Shift labels 8 pixels up from points
+      fontSize: 11
     })
-  ]
+  ],
+
+   margin: 40,
 })
 ```
 ---
@@ -68,7 +81,10 @@ When examining strength of schedule, Alabama stands out with the toughest slate 
 </p>
 
 ---
-
+```sql
+SELECT * FROM marchMadnessData
+```
+---
 
 </article>
 

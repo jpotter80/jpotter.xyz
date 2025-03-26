@@ -1,6 +1,8 @@
 ---
 theme: [deep-space, wide]
 title: Viz Journal
+sql:
+  weather: /data/weather.csv
 ---
 <head>
 
@@ -25,6 +27,8 @@ const weather = FileAttachment("/data/weather.csv").csv({typed: true})
 Plot.plot({
   title: "Asheville Regional Airport Daily Rain Totals (Inches)",
   width,
+  x: { grid: false, label: "Date" },
+  y: { grid: true, label: "Precipitation (inches)"},
   caption:
     "This chart illustrates rain totals leading up to and including Hurricane Helene",
   subtitle: "September 2024",
@@ -35,8 +39,16 @@ Plot.plot({
       fill: "#375ba6",
       fillOpacity: 1,
       tip: true,
-      curve: "basis",
-    })
+      curve: "basis"
+    }),
+
+    Plot.text(weather, Plot.selectMaxY({
+      x: "date",
+      y: "precipitation",
+      text: "precipitation",
+      fill: "#fb8779",
+      fontSize: 16,
+    }))
   ]
 })
 ```
@@ -67,6 +79,11 @@ Plot.plot({
 
 ---
 
+```sql
+SELECT * FROM weather
+```
+
+---
 
 </body>
 

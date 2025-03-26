@@ -1,6 +1,8 @@
 ---
 theme: [deep-space, wide]
 title: Viz Journal
+sql:
+  volBaseballHistory: /data/vol-baseball-history.csv
 ---
 <head>
 
@@ -61,6 +63,12 @@ Plot.plot({
     Looking at the program's evolution, there's a clear pattern of increasing success and stability. From the challenging early years, including the program's lowest point in 1958 (2-13-1 under George Cafego), to the modern era's sustained excellence, Tennessee baseball has transformed into one of the nation's premier programs. This growth reflects not just athletic achievement, but the development of a comprehensive program that consistently competes at the highest level of collegiate baseball. And in 2025, Tennessee Baseball will take the diamond as the reigning National Champions.
   </p>
 </article>
+
+---
+
+```sql
+SELECT * FROM volBaseballHistory
+```
 
 ---
 
