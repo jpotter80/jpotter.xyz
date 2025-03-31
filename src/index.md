@@ -17,7 +17,7 @@ title: Home
 </div>
 
 <div>
-    <p>Hi, I'm James Potter, a data developer based in the scenic mountains of Western North Carolina. This site serves as both a personal website and a platform to demonstrate my interests and abilities. My journey into data analytics began with a foundation in bioscience and a passion for uncovering insights from complex datasets.</p>
+    <p>I'm James Potter, a data developer and freelance data professional based in the scenic mountains of Western North Carolina. With a strong foundation in bioscience and data analysis, I specialize in transforming complex datasets into practical solutions for businesses and organizations. My analytical approach combines technical expertise with a keen eye for meaningful insights that drive decision-making.</p>
 </div>
 
 <div>
@@ -25,7 +25,7 @@ title: Home
 </div>
 
 <div>
-    <p>I specialize in transforming raw data into actionable insights through analytics and visualization. Recently certified in Google Data Analytics, I work with Python, R, SQL, and various visualization tools to bring data stories to life. I'm particularly interested in creating interactive dashboards that make data accessible and meaningful.</p>
+    <p>I provide comprehensive data services including cleaning and processing, analysis, visualization, and automation. Recently certified in Google Data Analytics, I leverage DuckDB, Python, SQL, and specialized visualization tools to solve data challenges efficiently. My freelance practice focuses on data quality, transformation pipelines, and creating accessible visualizations that tell compelling stories.</p>
 </div>
 
 <div>
@@ -33,7 +33,11 @@ title: Home
 </div>
 
 <div>
-    <p>I recently deployed my first Observable Framework project - a real-time weather dashboard for Western North Carolina. This project showcases my skills in: interactive data visualization, CI/CD pipeline implementation, cloud deployment, and real-time data processing.</p>
+    <p>
+    - Data Cleaning Framework: Developed a modular Python framework for efficient data cleaning and transformation across multiple formats
+    - Interactive Weather Dashboard: Created a real-time weather monitoring system for Western North Carolina using Observable Framework
+    - PDF Data Extraction System: Built an automated workflow for extracting, validating, and structuring data from complex PDF documents
+    - Synthetic Data Generation: Designed customizable generators for creating realistic test data with controlled quality characteristics</p>
 </div>
 
 <div>
@@ -41,19 +45,19 @@ title: Home
 </div>
 
 <div>
-    <h4 class="minor">Languages:</h4>
+    <h4 class="minor">Languages & Core Technologies:</h4>
 </div>
 
 <div>
-    <p>Python, R, SQL, Markdown, HTML, CSS, JavaScript</p>
+    <p>Python, SQL, Markdown, HTML/CSS, JavaScript</p>
 </div>
 
 <div>
-    <h4 class="minor">Analysis:</h4>
+    <h4 class="minor">Analysis & Processing:</h4>
 </div>
 
 <div>
-    <p>Excel, Pandas, NumPy, Scikit-learn</p>
+    <p>DuckDB, Pandas, NumPy, Excel, Scikit-learn</p>
 </div>
 
 <div>
@@ -61,7 +65,7 @@ title: Home
 </div>
 
 <div>
-    <p>Observable, Jupyter, Excel, Tableau, Seaborn</p>
+    <p>Observable Framework, Jupyter Notebooks, Excel, Matplotlib/Seaborn</p>
 </div>
 
 <div>
@@ -69,7 +73,7 @@ title: Home
 </div>
 
 <div>
-    <p>Git, Docker, Poetry, VS Code, Copilot, Vercel</p>
+    <p>Git, Docker, UV (Python Package Management), VS Code, GitHub Copilot</p>
 </div>
 
 <div>
@@ -77,26 +81,32 @@ title: Home
 </div>
 
 <div>
-    <p>PostgreSQL, duckdb</p>
+    <p>DuckDB, PostgreSQL</p>
 </div>
 
 <div>
-    <h3 class="minor">Currently Learning</h3>
+    <h3 class="minor">Current Focus</h3>
 </div>
 
 <div>
-    <ul>
-      <li><i>Deepening my expertise in data visualization through Observable Framework</i></li>
-      <li><i>Exploring machine learning applications in data analysis</i></li>
-      <li><i>Building a portfolio of interactive dashboards</i></li>
-      <li><i>Integrating large language models into data pipelines</i></li>
-    </ul>
+    <p>
+      <li><i>Expanding my data service offerings with specialized PDF processing and web data collection</i></li>
+    </p>
+    <p>
+      <li><i>Developing reusable data quality assessment frameworks</i></li>
+    </p>
+    <p>
+      <li><i>Creating reproducible data workflows that combine multiple processing stages</i></li>
+    </p>
+    <p>
+      <li><i>Integrating AI tools to enhance data extraction and cleaning processes</i></li>
+    </p>  
 </div>
 
 ---
 
 <div>
-    <p>Let's Connect! I'm always interested in collaborating on data projects or discussing opportunities in data analytics. Feel free to reach out through LinkedIn or check out my projects on GitHub.</p>
+    <p>I'm available for freelance data projects and consulting. Whether you need help cleaning messy datasets, extracting information from documents, or building data pipelines, I'd love to discuss how I can help. Feel free to reach out through LinkedIn or explore my projects on GitHub.RetryClaude can make mistakes. Please double-check responses.</p>
 </div>
 
 <div>
