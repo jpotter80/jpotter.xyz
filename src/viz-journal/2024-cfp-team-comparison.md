@@ -42,6 +42,7 @@ Plot.plot({
   y: { 
     label: "↑ Points allowed per game",
     grid: true,
+    reverse: true, 
     // Lower values are better for defense
     // Typical range is 10-35 points allowed
   },
