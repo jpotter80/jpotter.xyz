@@ -33,11 +33,19 @@ title: Home
 </div>
 
 <div>
+    <ul>
     <p>
     - Data Cleaning Framework: Developed a modular Python framework for efficient data cleaning and transformation across multiple formats
+    </p>
+    <p>
     - Interactive Weather Dashboard: Created a real-time weather monitoring system for Western North Carolina using Observable Framework
+    </p>
+    <p>
     - PDF Data Extraction System: Built an automated workflow for extracting, validating, and structuring data from complex PDF documents
+    </p>
+    <p>
     - Synthetic Data Generation: Designed customizable generators for creating realistic test data with controlled quality characteristics</p>
+    </ul>
 </div>
 
 <div>
