@@ -68,6 +68,10 @@ export default {
           path: "/quick-reference/bash",
         },
         {
+          name: "Docker CLI",
+          path: "/quick-reference/docker-cli",
+        },
+        {
           name: "Duckdb",
           path: "/quick-reference/duckdb",
         },
