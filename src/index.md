@@ -114,7 +114,7 @@ title: Home
 ---
 
 <div>
-    <p>I'm available for freelance data projects and consulting. Whether you need help cleaning messy datasets, extracting information from documents, or building data pipelines, I'd love to discuss how I can help. Feel free to reach out through LinkedIn or explore my projects on GitHub.RetryClaude can make mistakes. Please double-check responses.</p>
+    <p>I'm available for freelance data projects and consulting. Whether you need help cleaning messy datasets, extracting information from documents, or building data pipelines, I'd love to discuss how I can help. Feel free to reach out through LinkedIn or explore my projects on GitHub.</p>
 </div>
 
 <div>
