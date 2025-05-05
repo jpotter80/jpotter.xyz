@@ -68,6 +68,10 @@ export default {
           path: "/quick-reference/bash",
         },
         {
+          name: "Data Types",
+          path: "/quick-reference/data-types",
+        },
+        {
           name: "Docker CLI",
           path: "/quick-reference/docker-cli",
         },
