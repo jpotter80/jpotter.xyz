@@ -8,7 +8,7 @@ The site consists of:
 - Home page with my bio and technical stack
 - Real-time weather dashboard for Black Mountain, NC
 - Gallery of my data projects
-- Visualization journal
+- Visualizations journal
 
 ## Development
 
