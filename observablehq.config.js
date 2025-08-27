@@ -6,6 +6,15 @@ export default {
   // The pages and sections in the sidebar. If you don’t specify this option,
   // all pages will be listed in alphabetical order. Listing pages explicitly
   // lets you organize them into sections and have unlisted pages.
+  // pages: [
+  //   {
+  //     name: "Examples",
+  //     pages: [
+  //       {name: "Dashboard", path: "/example-dashboard"},
+  //       {name: "Report", path: "/example-report"}
+  //     ]
+  //   }
+  // ],
   pages: [
     {
       name: "Astronomy Picture of the Day",
@@ -136,5 +145,6 @@ export default {
   // search: true, // activate search
   // linkify: true, // convert URLs in Markdown to links
   // typographer: false, // smart quotes and other typographic improvements
-  // cleanUrls: true, // drop .html from URLs
+  // preserveExtension: false, // drop .html from URLs
+  // preserveIndex: false, // drop /index from URLs
 };
