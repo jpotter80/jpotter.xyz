@@ -29,6 +29,10 @@ export default {
       path: "/my-weather",
     },
     {
+      name: "Volquest Recommendations",
+      path: "/volquest-recos",
+    },
+    {
       name: "Viz Journal",
       collapsible: true,
       open: true,
