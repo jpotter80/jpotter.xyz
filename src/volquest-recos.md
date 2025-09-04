@@ -6,18 +6,9 @@ title: Volquest Recommendations
 # Volquest Recos
 
 ```js
-import * as Plot from "npm:@observablehq/plot";
-import * as topojson from "npm:topojson-client";
+import * as L from "npm:leaflet";
 ```
 
-```js
-// Load the world topology data
-const land50m = FileAttachment("./data/land-50m.json").json();
-```
-```js
-// Extract land features for mapping
-const land = topojson.feature(land50m, land50m.objects.land);
-```
 ```js
 // Load restaurant data
 const restaurants = FileAttachment("./data/restaurants_geocoded_complete.csv").csv({typed: true});
@@ -74,52 +65,23 @@ Explore restaurants from the Volquest recommendations across the globe:
 
 ```js
 // Create the main restaurant map 
-const restaurantMap = Plot.plot({
-  projection: "equal-earth",
-  width: Math.max(800, width),
-  height: Math.max(500, Math.min(width * 0.5, 700)),
-  style: "background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);",
-  marginTop: 10,
-  marginBottom: 10,
-  marginLeft: 10,
-  marginRight: 10,
-  marks: [
-    Plot.geo(land, { 
-      fill: "#374151", 
-      stroke: "#4b5563", 
-      strokeWidth: 0.3,
-      fillOpacity: 0.8
-    }),
-    Plot.graticule({ 
-      stroke: "#6b7280", 
-      strokeOpacity: 0.2,
-      strokeDasharray: "2,2"
-    }),
-    Plot.sphere({ 
-      stroke: "#9ca3af", 
-      strokeWidth: 1.5,
-      fill: "none"
-    }),
-    Plot.dot(validRestaurants, {
-      x: "Longitude",
-      y: "Latitude", 
-      r: d => d["Precision Level"] === "restaurant" ? 8 : 6,
-      fill: d => d["Precision Level"] === "restaurant" ? "#ef4444" : "#f59e0b",
-      stroke: d => d["Precision Level"] === "restaurant" ? "#dc2626" : "#d97706",
-      strokeWidth: 2,
-      fillOpacity: 0.9,
-      strokeOpacity: 1,
-      title: d => `🍽️ ${d["Restaurant Name"]}
-📍 ${d["Original City"]}, ${d["Original State"]} ${d["Original Country"]}
-🎯 Precision: ${d["Precision Level"]}
-${d["Found Address"] || d["Geocoded Address"] || ""}`,
-      filter: d => d["Precision Level"] === "restaurant" ? "drop-shadow(0px 0px 4px rgba(239, 68, 68, 0.8))" : "none"
-    })
-  ]
-});
+const knoxville = [35.9606, -83.9207];
+const div = display(document.createElement("div"));
+div.style = "height: 500px;";
+const map = L.map(div).setView(knoxville, 10);
+
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+for (const restaurant of validRestaurants) {
+  const marker = L.marker([restaurant.Latitude, restaurant.Longitude]).addTo(map);
+  marker.bindPopup(`<b>${restaurant["Restaurant Name"]}</b><br>${restaurant["Original City"]}, ${restaurant["Original State"]}`);
+}
 ```
 
-${restaurantMap}
+${div}
 
 ## 🍽️ Restaurant Directory
 
@@ -320,94 +282,6 @@ const restaurantTable = Inputs.table(validRestaurants, {
 .table-container input[type="checkbox"] {
   accent-color: #7fc8b6;
   transform: scale(1.2);
-}
-
-/* Statistics grid */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-  max-width: 800px;
-  width: 100%;
-}
-
-.stat-card {
-  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-  border-radius: 12px;
-  padding: 2rem;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  border: 1px solid #475569;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.stat-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-.stat-number {
-  font-size: 3rem;
-  font-weight: 900;
-  color: #7fc8b6;
-  line-height: 1;
-  margin-bottom: 0.5rem;
-}
-
-.stat-label {
-  font-size: 0.9rem;
-  color: #cbd5e1;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 500;
-}
-
-/* Legend styling */
-.legend {
-  background: rgba(30, 41, 59, 0.8);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin: 2rem 0;
-  border: 1px solid #475569;
-  backdrop-filter: blur(10px);
-}
-
-.legend h4 {
-  margin: 0 0 1rem 0;
-  color: #e2e8f0;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.8rem;
-  color: #cbd5e1;
-}
-
-.legend-item:last-child {
-  margin-bottom: 0;
-}
-
-.legend-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin-right: 0.8rem;
-  border: 2px solid;
-}
-
-.restaurant-dot {
-  background-color: #ef4444;
-  border-color: #dc2626;
-  box-shadow: 0 0 6px rgba(239, 68, 68, 0.6);
-}
-
-.city-dot {
-  background-color: #f59e0b;
-  border-color: #d97706;
 }
 
 /* Statistics grid */
