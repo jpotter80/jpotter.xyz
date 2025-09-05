@@ -51,17 +51,7 @@ Explore restaurants from the Volquest recommendations across the globe:
   </div>
 </div>
 
-<div class="legend">
-  <h4>Legend</h4>
-  <div class="legend-item">
-    <div class="legend-dot restaurant-dot"></div>
-    <span>Restaurant-level precision (exact location)</span>
-  </div>
-  <div class="legend-item">
-    <div class="legend-dot city-dot"></div>
-    <span>City-level precision (approximate location)</span>
-  </div>
-</div>
+
 
 ```js
 // Create the main restaurant map 
