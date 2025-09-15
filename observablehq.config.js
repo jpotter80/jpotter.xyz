@@ -21,12 +21,12 @@ export default {
       path: "/apod",
     },
     {
-      name: "Markdown Calculator",
-      path: "/calc",
-    },
-    {
       name: "Gallery of Projects",
       path: "/gallery-of-projects",
+    },
+    {
+      name: "Markdown Calculator",
+      path: "/calc",
     },
     {
       name: "My Weather",
