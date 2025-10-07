@@ -16,10 +16,10 @@ export default {
   //   }
   // ],
   pages: [
-    {
-      name: "Astronomy Picture of the Day",
-      path: "/apod",
-    },
+  //  {
+  //    name: "Astronomy Picture of the Day",
+  //    path: "/apod",
+  //  },
     {
       name: "Gallery of Projects",
       path: "/gallery-of-projects",
@@ -28,10 +28,10 @@ export default {
       name: "Markdown Calculator",
       path: "/calc",
     },
-    {
-      name: "My Weather",
-      path: "/my-weather",
-    },
+ //   {
+ //     name: "My Weather",
+ //     path: "/my-weather",
+ //   },
     {
       name: "Volquest Recommendations",
       path: "/volquest-recos",
