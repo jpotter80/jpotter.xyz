@@ -17,7 +17,7 @@ title: Home
 </div>
 
 <div>
-    <p>I'm **James Potter**, a data engineer and technical developer based in the scenic mountains of Western North Carolina. For the past two years, I've been intentionally re-skilling into AI/ML infrastructure and developer tooling after previously working as a pharmacy technician. My work focuses on building documentation systems, developer tools, and data infrastructure that makes complex technical information accessible to both humans and AI agents.</p>
+    <p>I'm James Potter, a data engineer and technical developer based in the scenic mountains of Western North Carolina. For the past two years, I've been intentionally re-skilling into AI/ML infrastructure and developer tooling after previously working as a pharmacy technician. My work focuses on building documentation systems, developer tools, and data infrastructure that makes complex technical information accessible to both humans and AI agents.</p>
 </div>
 
 <div>
@@ -25,7 +25,7 @@ title: Home
 </div>
 
 <div>
-    <p>I build developer tools and infrastructure for AI/ML workflows, specializing in documentation search systems, vector databases, and data processing pipelines. My current focus is on the **Model Context Protocol (MCP)** ecosystem, where I've created a framework that transforms technical documentation into intelligent, searchable resources for AI assistants. I work extensively with emerging technologies including Mojo programming language, Modular's MAX framework, and modern data tools like DuckDB and Observable Framework.</p>
+    <p>I build developer tools and infrastructure for AI/ML workflows, specializing in documentation search systems, vector databases, and data processing pipelines. My current focus is on the Model Context Protocol (MCP) ecosystem, where I've created a framework that transforms technical documentation into intelligent, searchable resources for AI assistants. I work extensively with emerging technologies including Mojo programming language, Modular's MAX framework, and modern data tools like DuckDB and Observable Framework.</p>
 </div>
 
 <div>
@@ -35,24 +35,24 @@ title: Home
 <div>
     <ul>
     <p>
-    - ### MCP Documentation Framework
-[https://github.com/jpotter80/mcp](https://github.com/jpotter80/mcp)
+    - MCP Documentation Framework
+https://github.com/jpotter80/mcp
 
 Built a production framework for converting markdown documentation into searchable MCP servers with hybrid vector + keyword search. Created self-contained servers for Mojo language documentation, DuckDB docs, and the MCP protocol itself. Implements semantic search using MAX embeddings (sentence-transformers) combined with full-text search via DuckDB's HNSW indexes and BM25 ranking.
     </p>
     <p>
-    - ### Hybrid Search Implementation
+    - Hybrid Search Implementation
 
 Designed and implemented Reciprocal Rank Fusion (RRF) algorithm combining vector similarity search with keyword matching for improved documentation retrieval. System includes graceful fallback to keyword-only search when vector embeddings are unavailable, demonstrating production-ready error handling.
     </p>
     <p>
-    - ### Multi-Language Programming Examples
-[https://github.com/jpotter80/go-vols](https://github.com/jpotter80/go-vols)
+    - Multi-Language Programming Examples
+https://github.com/jpotter80/go-vols
 
 Created beginner-friendly repository demonstrating "Hello World" equivalents across 10 programming languages (Python, Rust, Go, C, C++, Java, JavaScript, SQL, Bash, Fortran) with detailed setup documentation and CLI tutorials for newcomers to programming.
     </p>
     <p>
-    - ### Data Visualization Projects
+    - Data Visualization Projects
 
 Built interactive data visualizations using Observable Framework, including restaurant recommendation mapping with automated geocoding pipelines and sports statistics dashboards. Demonstrates proficiency in web-based data presentation and ETL workflows.
     </p>
