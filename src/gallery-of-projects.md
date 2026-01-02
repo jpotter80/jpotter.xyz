@@ -13,11 +13,39 @@ title: Gallery of Projects
 
 <div class=content>
 <div>
+<h2 class=major>MCP Documentation Framework</h2>
+</div>
+<div>
+  <p>
+  A production framework for building self-contained, searchable MCP (Model Context Protocol) servers from technical documentation. Transforms markdown/MDX documentation into intelligent resources for AI assistants using hybrid search that combines semantic vector similarity (via Modular's MAX framework and sentence-transformers) with keyword matching (BM25/FTS). Currently deployed with servers for Mojo programming language documentation, DuckDB docs, and the MCP protocol itself. Features include graceful fallback when embeddings are unavailable, YAML-based configuration, DuckDB with HNSW vector indexes, and Reciprocal Rank Fusion for intelligent result ranking. Built with Python, DuckDB, DuckLake for versioned data, and designed for distribution as standalone packages.
+  </p>
+</div>
+
+<a href="https://github.com/jpotter80/mcp">MCP Documentation Framework</a>
+
+---
+
+<div class=content>
+<div>
+<h2 class=major>Go Vols! Multi-Language Examples</h2>
+</div>
+<div>
+  <p>
+  Educational repository demonstrating "Hello World" equivalents across 10 programming languages: Python, Rust, Go, C, C++, Java, JavaScript/Deno, SQL, Bash, and Fortran. Each language implementation includes detailed setup instructions, beginner-friendly documentation, and comprehensive CLI tutorials covering command-line basics, permissions, PATH configuration, and package management. Designed to help newcomers explore different programming paradigms (procedural, object-oriented, functional, systems programming) while learning fundamental development environment setup. All documentation written with clarity and accessibility as primary goals, demonstrating technical writing skills alongside programming knowledge.
+  </p>
+</div>
+
+<a href="https://github.com/jpotter80/go-vols">Go Vols Repository</a>
+
+---
+
+<div class=content>
+<div>
 <h2 class=major>jpotter.xyz</h2>
 </div>
 <div>
   <p>
-  This site! Created using Observable Framework for static site generation and data integration via data loaders.
+  This site! Built with Observable Framework for static site generation with integrated data visualization capabilities. Features automated deployment via GitHub Actions with hourly cache refresh to ensure data stays current. Demonstrates proficiency with Observable's data loader system, custom styling, and web-based data presentation. Hosted on GitHub Pages with CI/CD pipeline handling build, cache management, and deployment automatically.
   </p>
 </div>
 
@@ -25,28 +53,41 @@ title: Gallery of Projects
 
 ---
 
-
 <div class=content>
 <div>
-<h2 class=major>My Local Weather Dashboard</h2>
+<h2 class=major>Restaurant Recommendations Mapping</h2>
 </div>
 <div>
   <p>
-  This dashboard visualizes weather data for Black Mountain, NC. The project uses the National Weather Service api and Observable Framework, CI/CD deployment using GitHub actions.
+  Interactive world map visualizing restaurant recommendations scraped from online forum discussions. Built complete ETL pipeline including web scraping with Python, automated geocoding using Brave Search API to convert restaurant names and locations to coordinates, data cleaning and validation, and final visualization using Observable Framework with observable.js. Features hybrid geocoding strategy combining city-level and precise coordinates, comprehensive data quality tracking (precision levels), and interactive tooltips with restaurant details. Demonstrates end-to-end data project skills from acquisition through presentation, working with real-world messy data.
   </p>
 </div>
 
-<a href="https://github.com/jpotter80/black-mountain-weather">My Weather</a>
+<a href="https://github.com/jpotter80/volquest-recos">Restaurant Mapping Project</a>
 
 ---
 
 <div class=content>
 <div>
-<h2 class=major>Data Pipeline</h2>
+<h2 class=major>Black Mountain Weather Dashboard</h2>
 </div>
 <div>
   <p>
-  This project automates the process of ingesting CSV files, creating a PostgreSQL database, analyzing data structure using llm's, and generating SQL transformations for data cleaning and normalization.
+  Real-time weather monitoring dashboard for Black Mountain, NC using National Weather Service API. Built with Observable Framework for responsive data visualization with automatic updates. Features hourly forecast displays, precipitation tracking, temperature trends, and severe weather alerts. Implements CI/CD deployment via GitHub Actions for continuous data refresh and automatic site updates. Demonstrates working with external APIs, data transformation pipelines, and creating production-ready dashboards for real-world use cases.
+  </p>
+</div>
+
+<a href="https://github.com/jpotter80/black-mountain-weather">Weather Dashboard</a>
+
+---
+
+<div class=content>
+<div>
+<h2 class=major>Automated Data Pipeline with LLM Analysis</h2>
+</div>
+<div>
+  <p>
+  Intelligent data ingestion pipeline that automates the process of importing CSV files, creating PostgreSQL databases, analyzing data structure using large language models, and generating SQL transformations for data cleaning and normalization. The system uses LLM capabilities to understand data patterns, suggest appropriate data types, identify relationships, and propose cleaning strategies. Demonstrates integration of AI tools into traditional data engineering workflows, combining database management, data quality assessment, and automated transformation generation. Built with Python, PostgreSQL, and OpenAI API integration.
   </p>
 </div>
 
@@ -56,43 +97,43 @@ title: Gallery of Projects
 
 <div class=content>
 <div>
-<h2 class=major>Voter Demographics with R</h2>
-</div>
-<div>
-  <p>
-  In this project we explore and clean Buncombe County, NC voter data, using R scripts, with visualizations created by ggplot.
-  </p>
-</div>
-
-<a href="https://github.com/jpotter80/voter-data">Voter Data</a>
-
----
-
-<div class=content>
-<div>
 <h2 class=major>Bluesky LLM Posting Bot</h2>
 </div>
 <div>
   <p>
-  An automated Bluesky posting bot written in Python that is configured to generate image descriptions via OpenAI's api, which is then sent to a HuggingFace api endpoint to create an image from the description. The script will then format the data for Bluesky's api and upload to the specific account.
+  Automated social media bot for Bluesky platform that generates original image content using AI. Pipeline orchestrates OpenAI's GPT-4 API for creative image description generation, HuggingFace API for text-to-image conversion using diffusion models, and Bluesky's social API for automated posting with proper image handling and metadata. Includes image resizing and compression to meet platform requirements, error handling and retry logic, and scheduled posting via cron jobs. Demonstrates API integration skills across multiple platforms, handling binary data, and building production automation workflows. Written in Python with Poetry for dependency management.
   </p>
 </div>
 
-<a href="https://github.com/jpotter80/bluesky-llm-posting">Bluesky LLM Posting</a>
+<a href="https://github.com/jpotter80/bluesky-llm-posting">Bluesky Bot</a>
 
 ---
 
 <div class=content>
 <div>
-<h2 class=major>Stellar Classification</h2>
+<h2 class=major>Stellar Classification with Machine Learning</h2>
 </div>
 <div>
   <p>
-  This project demonstrates the effectiveness of machine learning in automating stellar classification between giant and dwarf stars. The integration of a PostgreSQL database enhances data accessibility and management. Future work may include refining the model with additional features, exploring other classification algorithms, and expanding the dataset to include more diverse stellar types.
+  Machine learning project automating stellar classification between giant and dwarf stars using scikit-learn. Implements data preprocessing, feature engineering, model training and evaluation with multiple classification algorithms, and performance comparison across different approaches. Integrates PostgreSQL database for efficient data management and accessibility. Includes exploratory data analysis, visualization of stellar properties using matplotlib/seaborn, and model performance metrics evaluation. Demonstrates complete ML workflow from data preparation through model deployment, working with scientific datasets and applying statistical analysis to astronomical classification problems.
   </p>
 </div>
 
 <a href="https://github.com/jpotter80/stellar-classification">Stellar Classification</a>
+
+---
+
+<div class=content>
+<div>
+<h2 class=major>Voter Demographics Analysis with R</h2>
+</div>
+<div>
+  <p>
+  Statistical analysis and visualization of Buncombe County, NC voter registration data using R programming language. Project includes comprehensive data cleaning workflows, exploratory data analysis to identify demographic patterns, and publication-quality visualizations created with ggplot2. Demonstrates proficiency with R's tidyverse ecosystem including dplyr for data manipulation, statistical analysis capabilities, and data visualization best practices. Explores voter distribution by age, party affiliation, geographic location, and registration trends over time. Showcases ability to work with government datasets and communicate findings through clear, informative graphics.
+  </p>
+</div>
+
+<a href="https://github.com/jpotter80/voter-data">Voter Data Analysis</a>
 
 ---
 
@@ -144,11 +185,10 @@ a[href] {
   .hero h1 {
     font-size: 90px;
   }
+}
 
 a[href] {
   color: #7fc8b6;
 }
 
 </style>
-
-
