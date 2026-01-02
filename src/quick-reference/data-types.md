@@ -349,60 +349,25 @@ This document provides a comprehensive reference of built-in data types across m
 
 ## Mojo
 
-### Primitive Types
-- **Int**: Integer type (default 64-bit)
-- **Int8**: 8-bit signed integer
-- **Int16**: 16-bit signed integer
-- **Int32**: 32-bit signed integer
-- **Int64**: 64-bit signed integer
-- **UInt**: Unsigned integer type (default 64-bit)
-- **UInt8**: 8-bit unsigned integer
-- **UInt16**: 16-bit unsigned integer
-- **UInt32**: 32-bit unsigned integer
-- **UInt64**: 64-bit unsigned integer
-- **Float**: Floating-point type (default 64-bit)
-- **Float16**: 16-bit floating-point
-- **Float32**: 32-bit floating-point
-- **Float64**: 64-bit floating-point
-- **Bool**: Boolean type (True or False)
+### Scalar Types
+- **Bool**: Boolean type (`True` or `False`)
+- **Int8, Int16, Int32, Int64**: Signed integers
+- **UInt8, UInt16, UInt32, UInt64**: Unsigned integers
+- **Float32, Float64**: Floating-point numbers
 - **String**: UTF-8 encoded text
-- **SIMD**: Single Instruction Multiple Data type
+- **SIMD**: Single Instruction, Multiple Data type
 
-### Reference Types
-- **Reference[Type]**: Reference to a value (like a pointer)
-- **OwnedReference[Type]**: Owned reference that guarantees no aliasing
+### Collection Types
+- **List[T]**: A dynamically-sized array of items of type T.
+- **Dict[K, V]**: An associative array of key-value pairs.
+- **Set[T]**: An unordered collection of unique items of type T.
+- **Tuple**: An immutable, fixed-size collection of heterogeneous values.
 
-### Optional Type
-- **Optional[Type]**: Represents a value that might be None
-
-### Container Types
-- **List[Type]**: Mutable, dynamically-sized list of homogeneous values
-- **Dict[KeyType, ValueType]**: Dictionary (hash map)
-- **Set[Type]**: Collection of unique values
-- **Tuple[Type1, Type2, ...]**: Immutable, fixed-size collection of heterogeneous values
-
-### Specialized Types
-- **StringLiteral**: Compile-time string literal type
-- **DType**: Data type descriptor
-- **Type[T]**: Type object (metaprogramming)
-- **NoneType**: Type of None value
-
-### Pointer Types
-- **Pointer[Type]**: Raw pointer to a value
-- **DTypePointer[Type]**: Typed raw pointer to a value with a specific data type
-
-### Memory Types
-- **Buffer**: Raw memory buffer
-- **HeapArray[Type, Size]**: Fixed-size array allocated on the heap
-
-### Tensor-Related Types
-- **Tensor[Type, Size]**: Tensor type with specified element type and dimensions
-- **TensorShape**: Shape of a tensor
-- **TensorSlice**: Slice of a tensor
-
-### Custom Types
-- **struct**: User-defined type with named fields
-- **trait**: Interface definition
+### Other Important Types
+- **Optional[T]**: Represents a value that may or may not be present.
+- **struct**: The primary way to define custom nominal types.
+- **trait**: Defines a shared set of behaviors that types can implement.
+- **NoneType**: The type of the `None` object, used to signal "no value".
 
 ---
 
