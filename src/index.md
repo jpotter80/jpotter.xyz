@@ -161,7 +161,7 @@ Built interactive data visualizations using Observable Framework, including rest
         <li class="icon brands fa-discord"><a href="https://discord.com/channels/@jpotter.xyz">Discord</a></li>
     </ul>
     <ul class="copyright">
-        <li>&copy; 2025 James Potter. All rights reserved.</li>
+        <li>&copy; 2026 James Potter. All rights reserved.</li>
     </ul>
 
 <style>
