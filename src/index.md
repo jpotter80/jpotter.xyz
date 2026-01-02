@@ -36,7 +36,7 @@ title: Home
     <ul>
     <p>
     - MCP Documentation Framework
-https://github.com/jpotter80/mcp
+    <a href="https://github.com/jpotter80/mcp">MCP</a>
 
 Built a production framework for converting markdown documentation into searchable MCP servers with hybrid vector + keyword search. Created self-contained servers for Mojo language documentation, DuckDB docs, and the MCP protocol itself. Implements semantic search using MAX embeddings (sentence-transformers) combined with full-text search via DuckDB's HNSW indexes and BM25 ranking.
     </p>
@@ -47,7 +47,7 @@ Designed and implemented Reciprocal Rank Fusion (RRF) algorithm combining vector
     </p>
     <p>
     - Multi-Language Programming Examples
-https://github.com/jpotter80/go-vols
+    <a href="https://github.com/jpotter80/go-vols">Go-Vols</a>
 
 Created beginner-friendly repository demonstrating "Hello World" equivalents across 10 programming languages (Python, Rust, Go, C, C++, Java, JavaScript, SQL, Bash, Fortran) with detailed setup documentation and CLI tutorials for newcomers to programming.
     </p>
