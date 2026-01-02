@@ -36,7 +36,7 @@ title: Gallery of Projects
   </p>
 </div>
 
-<a href="/my-weather">My Weather</a>
+<a href="https://github.com/jpotter80/black-mountain-weather">My Weather</a>
 
 ---
 
