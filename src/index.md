@@ -64,43 +64,43 @@ Built interactive data visualizations using Observable Framework, including rest
 </div>
 
 <div>
-    <h4 class="minor">Languages & Core Technologies:</h4>
+    <h4 class="minor">Core Languages & Tools:</h4>
 </div>
 
 <div>
-    <p>Python, SQL, Markdown, HTML/CSS, JavaScript</p>
+    <p>Python (primary), SQL, Mojo (learning), Markdown, HTML/CSS/JavaScript</p>
 </div>
 
 <div>
-    <h4 class="minor">Analysis & Processing:</h4>
+    <h4 class="minor">Data & Infrastructure:</h4>
 </div>
 
 <div>
-    <p>DuckDB, Pandas, NumPy, Excel, Scikit-learn</p>
+    <p>DuckDB, PostgreSQL, Ducklake, Vector Databases (HNSW indexes), Pandas</p>
 </div>
 
 <div>
-    <h4 class="minor">Visualization:</h4>
+    <h4 class="minor">AI/ML Tools:</h4>
 </div>
 
 <div>
-    <p>Observable Framework, Jupyter Notebooks, Excel, Matplotlib/Seaborn</p>
+    <p>Modular MAX Framework, Sentence Transformers, MCP Protocol, Vector Embeddings</p>
 </div>
 
 <div>
-    <h4 class="minor">Tools:</h4>
+    <h4 class="minor">Developer Tools:</h4>
 </div>
 
 <div>
-    <p>Git, Docker, UV (Python Package Management), VS Code, GitHub Copilot</p>
+    <p>Git/GitHub, VS Code,Docker, UV/Pixi (Python Package Management), GitHub Actions</p>
 </div>
 
 <div>
-    <h4 class="minor">Databases:</h4>
+    <h4 class="minor">Frameworks:</h4>
 </div>
 
 <div>
-    <p>DuckDB, PostgreSQL</p>
+    <p>Observable Framework, Scrapy, FastMCP, Marimo notebooks</p>
 </div>
 
 <div>
@@ -109,17 +109,32 @@ Built interactive data visualizations using Observable Framework, including rest
 
 <div>
     <p>
-      <li><i>Expanding my data service offerings with specialized PDF processing and web data collection</i></li>
+      <li><i>Building searchable documentation infrastructure for AI agents using MCP protocol</i></li>
     </p>
     <p>
-      <li><i>Developing reusable data quality assessment frameworks</i></li>
+      <li><i>Exploring Mojo programming language and MAX framework for AI/ML workloads</i></li>
     </p>
     <p>
-      <li><i>Creating reproducible data workflows that combine multiple processing stages</i></li>
+      <li><i>Creating reproducible data pipelines combining DuckDB, vector search, and automation</i></li>
     </p>
     <p>
-      <li><i>Integrating AI tools to enhance data extraction and cleaning processes</i></li>
-    </p>  
+      <li><i>Contributing to open-source documentation and developer tool ecosystems</i></li>
+    </p> 
+    <p>
+      <li><i>Deepening expertise in cloud infrastructure and GPU programming concepts</i></li>
+    </p> 
+</div>
+
+<div>
+    <h3 class="minor">About My Journey</h3>
+</div>
+
+<div>
+    <p>After earning an associate's degree in bioscience technology, I worked as a pharmacy technician for several years. Two years ago, I made a deliberate decision to pivot into data engineering and developer tooling. This transition has been self-directed—I've learned by building production tools, contributing to open-source ecosystems, and staying current with emerging technologies in the AI/ML space.</p>
+</div>
+
+<div>
+    <p>I currently work part-time at a local hiking shop while pursuing full-time opportunities in technical writing, developer relations, or data engineering roles. My partner's career keeps us based in North Carolina, making remote positions particularly appealing, though I'm happy to travel for onboarding, training, or team meetings.</p>
 </div>
 
 ---
